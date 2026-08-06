@@ -1,0 +1,15 @@
+{
+  "baseColorScheme": "auto",
+  "attachmentFolderPath": "_attachments",
+  "newFileLocation": "current",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "showLineNumber": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showFrontmatter": true,
+  "tabSize": 2
+}
