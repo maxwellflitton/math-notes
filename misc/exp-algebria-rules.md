@@ -67,3 +67,14 @@ The exponential is the function equal to its own derivative, $\dfrac{d}{dx}e^x =
 why it's the natural solution to growth/decay equations like $\dfrac{dp}{dt} = (b-c)\,p(t)$ —
 giving $p(t) = p_0\,e^{(b-c)t}$. The base-conversion $a^x = e^{x\ln a}$ is what lets you
 differentiate any exponential. See [[First order differential equations]].
+
+That same property is why $y = e^{\lambda x}$ is the trial solution for second-order equations
+in [[linear homogenious equations]], and why splitting $e^{(\alpha + \beta i)x} = e^{\alpha x}e^{i\beta x}$
+(just the product law above) separates decay from oscillation in [[Complex conjugate roots]].
+
+## Connections
+- Part of [[Foundations]], alongside [[sets]].
+- Integration tables that apply these rules directly: [[exponents]] (including the $\int x^{-1} = \ln|x|$ gap) and [[trig]].
+- Every ODE note leans on the log laws to exponentiate a solution: [[Direct Integration]], [[Linear Differential Equations]], [[population-example]].
+- Chosen as $u$ or $dv$ in worked integrals: [[by-parts]], [[by-substitution]].
+- $e^{i\theta} = \cos\theta + i\sin\theta$ gives the one-line proof in [[compound angle formula]].

@@ -60,3 +60,12 @@ $$
 $$
 This is solved in full in [[population-example|the logistic worked example]], giving the
 sigmoid solution $P(t) = \dfrac{M\,P_0}{P_0 + (M - P_0)\,e^{-kt}}$.
+
+## Connections
+- The overview note for the first-order half of [[Differential Equations]]. The three methods named at the top each have their own note:
+	- Direct integration and separation of variables → [[Direct Integration]]
+	- Integrating factor → [[Linear Differential Equations]]
+- Worked example: [[population-example]].
+- The $\delta t \to 0$ step that turns the difference quotient into $\frac{dp}{dt}$ is [[lim-zero-example]].
+- Integrating $\int\frac1p\,dp = \ln|p|$ and then exponentiating both sides: [[exponents]] and [[exp-algebria-rules]].
+- One order up: [[Second Order differential Equations]], where two arbitrary constants are needed instead of one.

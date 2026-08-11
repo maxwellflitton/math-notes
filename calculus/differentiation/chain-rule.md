@@ -64,6 +64,9 @@ $$
 $$
 
 ## Connections
+- Part of [[Calculus]]; built on the limit definition in [[lim-zero-example]].
 - The chain rule run **backwards** is [[by-substitution|integration by substitution]].
-- Combines with the product rule (see [[by-parts]]) for messier expressions.
-- Underlies differentiation from first principles in [[lim-zero-example]].
+- Combines with the [[product rule]] — whose reverse is [[by-parts]] — for messier expressions.
+- It is the source of every "divide by the inner coefficient" in the integration tables: the $\tfrac1a$ in [[trig]] and in [[exponents]].
+- The factor of $a$ on $\sin(ax)$ and $\cos(ax)$ throughout [[compound angle formula]] is this rule.
+- Differentiating the trial solution $y = e^{\lambda x}$ in [[linear homogenious equations]] uses it.

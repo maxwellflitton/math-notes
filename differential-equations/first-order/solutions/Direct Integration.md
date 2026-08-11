@@ -47,3 +47,11 @@ Therefore the solution is:
 $$
 y = 1 + Ax
 $$
+
+## Connections
+- The simplest of the methods surveyed in [[First order differential equations]]; the harder linear case needs the integrating factor in [[Linear Differential Equations]].
+- The integrals themselves come from [[exponents]] (note $\int\frac1x dx = \ln|x|$, used twice above), [[trig]], [[by-substitution]] and [[by-parts]].
+- Exponentiating $\ln|y-1| = \ln|x| + C$ into $y - 1 = Ax$ uses [[exp-algebria-rules]].
+- Separation of variables is pushed further in [[population-example]], where the left side needs partial fractions first.
+- The second-order version needs **two** constants and two initial conditions — see [[Second Order differential Equations]].
+- Part of [[Differential Equations]].

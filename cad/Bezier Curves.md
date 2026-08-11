@@ -45,9 +45,11 @@ $$
 > The curve leaves $\mathbf{P}_0$ heading straight at $\mathbf{P}_1$. To join two cubics with smooth $G^1$ continuity, make $\mathbf{P}_0,\mathbf{P}_1$ of the second segment collinear with the last two of the first.
 
 ## Connections
-- Built from [[Parametric Curves and Surfaces]]; generalized by [[B-Splines and NURBS]].
+- Part of [[CAD Geometry]]. Built from [[Parametric Curves and Surfaces]]; generalized by [[B-Splines and NURBS]].
 - Smooth joins use [[Continuity and Smoothness]].
-- Tangents/derivatives draw on [[Vector Calculus]] and [[Partial Derivatives]].
+- Tangents/derivatives draw on [[Calculus]] and [[chain-rule|the chain rule]], and later on [[Vector Calculus]] and [[Partial Derivatives]].
+- Control points, the convex hull and the distance metric all live in [[Euclidean space]]; the control polygon is a chain of [[Lines]], and the degree-1 curve $\mathbf{B}(t) = (1-t)\mathbf{P}_0 + t\mathbf{P}_1$ *is* a line segment — de Casteljau just repeats that interpolation.
+- The parameter domain $t \in [0,1]$ in set-builder terms: [[sets]]. Binomial/index algebra for the Bernstein weights: [[exp-algebria-rules]].
 
 ## Open questions / TODO
 - [ ] Derive de Casteljau and show it equals the Bernstein form.

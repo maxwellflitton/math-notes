@@ -69,6 +69,8 @@ $$
 (You can also derive this by writing $2^{x} = e^{x\ln 2}$ — see [[exp-algebria-rules]] — and integrating with $a = \ln 2$.)
 
 ## Connections
-- Reverse of the [[chain-rule|chain rule]]; the linear-inside cases are quick [[by-substitution]].
+- Part of [[Calculus]]. Reverse of the [[chain-rule|chain rule]]; the linear-inside cases are quick [[by-substitution]].
 - Sits alongside [[trig|trig integration]] and [[by-parts]] as the core integration toolkit.
 - Exponent/log algebra: [[exp-algebria-rules]].
+- The $n = -1$ case, $\int\frac1x dx = \ln|x|$, is the single most-used integral in [[Differential Equations]] — it is the step that produces $\ln|p| = rt + C$ in [[First order differential equations]], and appears again in [[Direct Integration]] and [[population-example]].
+- $\int e^{ax}h(x)\,dx$ is the integral left over by the integrating factor in [[Linear Differential Equations]].

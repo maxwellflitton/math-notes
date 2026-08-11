@@ -98,5 +98,8 @@ y = \frac{-1}{2} \left(1 + \frac{1}{2}\right) e^{-2x} + C
 $$
 
 ## Connections
-- The reverse of the product rule — pairs with the chain-rule-based [[trig|trig integration]] and $u$-substitution.
+- Part of [[Calculus]]. The exact reverse of the [[product rule]] — the derivation above is just that rule integrated.
+- Its sibling is [[by-substitution]] (the reverse of [[chain-rule|the chain rule]]); together with [[exponents]] and [[trig|trig integration]] they are the core toolkit.
+- The integrating factor method in [[Linear Differential Equations]] recognises the same product-rule pattern, but in the other direction — spotting $uv$ rather than unwinding it.
 - Exponent/log mechanics used above: [[exp-algebria-rules]].
+- Products of trig functions can often dodge by-parts entirely using the product-to-sum identities in [[compound angle formula]].

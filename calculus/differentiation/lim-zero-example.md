@@ -40,3 +40,9 @@ $$
 This cancellation is legal because $\delta y$ is *approaching* zero but never *equals* zero — it is a small nonzero number, so dividing by it is fine. A limit asks what value the expression heads towards, not its value *at* $\delta y = 0$. So we simplify first (while $\delta y \neq 0$), then take the limit of the harmless expression $2y + \delta y \to 2y$.
 
 Intuitively: numerator and denominator both vanish, but in lockstep. The denominator's drive to infinity is exactly matched by the numerator's drive to zero, and they balance at the finite value $2y$ — which is precisely what the derivative measures.
+
+## Connections
+- The foundation of [[Calculus]] — every rule above it ([[product rule]], [[chain-rule]]) is a shortcut for this limit.
+- The same $\delta \to 0$ argument turns the discrete birth/death difference into a derivative in [[First order differential equations]].
+- Reversing these derivatives is what the integration tables in [[trig]] and [[exponents]] are reading off.
+- The derivative generalises the constant slope $m$ of [[Lines]] to curves.

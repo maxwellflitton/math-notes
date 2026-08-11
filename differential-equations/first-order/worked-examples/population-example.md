@@ -88,3 +88,9 @@ $$
 The S-shaped (sigmoid) logistic curve is the workhorse for bounded growth. The two new
 ingredients beyond the exponential model are **partial fractions** (to integrate the
 separated left side) and a **carrying capacity** $M$ that caps the growth.
+
+## Connections
+- Continues the exponential model set up in [[First order differential equations]]; the method is separation of variables from [[Direct Integration]].
+- Integrals used: $\int\frac1P\,dP = \ln|P|$ from [[exponents]], and the sign flip on $\int\frac{1}{M-P}\,dP$ is a one-line [[by-substitution]].
+- Combining and exponentiating the logs: [[exp-algebria-rules]].
+- Part of [[Differential Equations]].

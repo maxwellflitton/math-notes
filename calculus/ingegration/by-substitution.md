@@ -91,6 +91,7 @@ $$
 
 
 ## Connections
-- Reverse of the chain rule; complements [[by-parts]] (reverse of the product rule).
-- The factor-of-$a$ shortcut for $\int \sin(at)\,dt$ in [[trig]] is just this substitution done in your head.
+- Part of [[Calculus]]. Reverse of [[chain-rule|the chain rule]]; complements [[by-parts]] (reverse of the [[product rule]]).
+- The factor-of-$a$ shortcut for $\int \sin(at)\,dt$ in [[trig]] is just this substitution done in your head — likewise the $\tfrac1a$ on $\int e^{ax}dx$ in [[exponents]].
+- Separation of variables is the same manoeuvre applied to an ODE — see [[Direct Integration]] and the $\int\frac{1}{M-P}dP$ step in [[population-example]].
 - Exponent/log mechanics used above: [[exp-algebria-rules]].

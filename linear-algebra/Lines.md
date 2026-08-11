@@ -2,7 +2,7 @@ lines can take the following form:
 $$
 \{\,(x, y) \mid ax + by = c,\ (a, b) \neq (0, 0)\,\}
 $$
-in Euclidian space. The standard form of a line is defined by the following:
+in [[Euclidean space]] (this set-builder notation is unpacked piece by piece in [[sets]]). The standard form of a line is defined by the following:
 $$
 ax + by = c
 $$
@@ -31,3 +31,10 @@ This says the same thing as point slope, but with the slope written directly in 
 The two point form is generally used when the geometry gives you *two locations* rather than a direction. This is the most common real world situation: you know two positions (two GPS coordinates, two data samples, two corners of a shape) and want the line through them. It is the natural way to reconstruct a line from raw sampled data, to interpolate between two known values, or to define an edge between two vertices. Once written, it expands into slope intercept form (for graphing and comparison) or general form $ax + by = c$ (the symmetric, division free form that also handles vertical lines).
 
 Note that this form still breaks down for a vertical line: if $x_{1} = x_{2}$ the denominator $x_{2} - x_{1}$ becomes zero and the slope is undefined. In that case the line is simply $x = x_{1}$, which is why the general form $ax + by = c$ is preferred when you need to cover every possible line without exceptions.
+
+## Connections
+- Part of [[Linear Algebra]]; lives in [[Euclidean space]].
+- The set-builder definition at the top is the worked example in [[sets]].
+- The slope $m = \frac{y_2 - y_1}{x_2 - x_1}$ is exactly the difference quotient whose limit defines the derivative — see [[lim-zero-example]]. A line is the curve whose slope never changes.
+- Interpolating between two known points is the degree-1 case of [[Bezier Curves]]: $\mathbf{B}(t) = (1-t)\mathbf{P}_0 + t\mathbf{P}_1$. Repeating that interpolation is de Casteljau's algorithm.
+- Control polygons in [[CAD Geometry]] are chains of these segments.

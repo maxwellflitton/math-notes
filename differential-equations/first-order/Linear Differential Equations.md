@@ -40,3 +40,10 @@ $$
 y(x) = e^{-Ax} \int e^{Ax}h(x) dx
 $$
 `h(x)` can be anything, like the environment surrounding a cup of tea working out when the tea becomes room temperature. 
+
+## Connections
+- One of the three first-order forms listed in [[First order differential equations]]; the others are handled by [[Direct Integration]].
+- The collapse of the left-hand side is the [[product rule]] recognised in reverse — the same idea that produces [[by-parts|integration by parts]].
+- The remaining $\int e^{Ax}h(x)\,dx$ is evaluated with [[exponents]], [[by-substitution]] or [[by-parts]] depending on $h$.
+- Exponent manipulation ($e^{Ax}e^{-Ax} = 1$): [[exp-algebria-rules]].
+- Part of [[Differential Equations]].

@@ -74,8 +74,10 @@ $$
 > $\dfrac{d}{dt}\!\left(-\tfrac12\cos 2t\right) = -\tfrac12 \cdot (-\sin 2t)\cdot 2 = \sin 2t$ ✓ — the chain-rule factor of $2$ cancels the $\tfrac12$.
 
 ## Connections
-- Reverse of the derivative rules — see [[lim-zero-example]] for differentiation from first principles.
-- The substitution in example 2 is the general $u$-substitution technique.
+- Part of [[Calculus]]. Reverse of the derivative rules — see [[lim-zero-example]] for differentiation from first principles.
+- The substitution in example 2 is the general $u$-substitution technique, [[by-substitution]]; the $\tfrac1a$ it produces is [[chain-rule|the chain rule]] running backwards, exactly as with $\int e^{ax}dx$ in [[exponents]].
+- There is no rule here for $\int\sin^2 x\,dx$ — you must first flatten the power with the identities in [[compound angle formula]], which also handles products of trig functions via product-to-sum (avoiding [[by-parts]]).
+- These integrals are what you need when solving oscillating systems: [[Second Order differential Equations]] and [[dampened harmonic oscillator]].
 - Exponent/log mechanics used alongside these: [[exp-algebria-rules]].
 
 ## Reference figure
