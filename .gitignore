@@ -145,7 +145,20 @@ vite.config.ts.timestamp-*
 .vite/
 
 # Obsidian — per-machine UI state (keep the rest of .obsidian/ tracked)
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache
-.obsidian/file-recovery/
+# The vault now lives in content/, so these paths moved with it.
+content/.obsidian/workspace.json
+content/.obsidian/workspace-mobile.json
+content/.obsidian/cache
+content/.obsidian/file-recovery/
+
+# Quartz — generated site and plugin tree, never committed.
+# GitHub Actions builds public/ as a Pages artifact instead.
+public/
+.quartz/
+.quartz-cache/
+prof
+tsconfig.tsbuildinfo
+quartz/cli/tui/dist/
+
+# Claude Code local settings (contains local machine paths)
+.claude/settings.local.json
