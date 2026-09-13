@@ -37,4 +37,6 @@ Note that this form still breaks down for a vertical line: if $x_{1} = x_{2}$ th
 - The set-builder definition at the top is the worked example in [[sets]].
 - The slope $m = \frac{y_2 - y_1}{x_2 - x_1}$ is exactly the difference quotient whose limit defines the derivative — see [[lim-zero-example]]. A line is the curve whose slope never changes.
 - Interpolating between two known points is the degree-1 case of [[Bezier Curves]]: $\mathbf{B}(t) = (1-t)\mathbf{P}_0 + t\mathbf{P}_1$. Repeating that interpolation is de Casteljau's algorithm.
+- The standard form $ax + by = c$ is a dot product, $\vec{n}\cdot\vec{r} = c$: the line is every point whose projection onto the normal $(a, b)$ is the same — see [[Scalar Product]].
+- Two lines are parallel exactly when their direction vectors cross to zero — [[Vector Product]].
 - Control polygons in [[CAD Geometry]] are chains of these segments.

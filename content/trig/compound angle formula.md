@@ -521,4 +521,5 @@ Same amplitude, and the ratio is simply flipped relative to the sine form. The t
 - The product-to-sum forms turn products of trig functions into sums, which is what makes them integrable without [[by-parts|integration by parts]].
 - The factors of $a$ on $\sin(ax)$ throughout come from [[chain-rule|the chain rule]].
 - The Euler-formula proof is the same algebra as the complex exponential solutions in [[Complex conjugate roots]].
+- The shortest proof of all: dot two unit vectors at angles $A$ and $B$ — $\hat{a}\cdot\hat{b}$ is $\cos A\cos B + \sin A\sin B$ by components and $\cos(A-B)$ by definition. See [[Scalar Product]].
 - The rotation-matrix proof is the composition of two rotations in [[Euclidean space]].

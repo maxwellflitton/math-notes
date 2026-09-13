@@ -70,5 +70,7 @@ $$
 - Part of [[Linear Algebra]]; these vectors live in [[Euclidean space]] — the magnitude $\sqrt{a_x^2 + a_y^2 + a_z^2}$ is just the Pythagorean distance from the origin.
 - $\mathbf{q} - \mathbf{p}$ being a displacement rather than a position is the distinction drawn in [[Displacement vs Position Vectors]] — head minus tail.
 - $\mathbf{r}(t) = (1 - t)\mathbf{p} + t\mathbf{q}$ is the parametric form of [[Lines]], and the degree-1 case of [[Bezier Curves]]. At $t = 0$ you are at $\mathbf{p}$, at $t = 1$ you are at $\mathbf{q}$.
-- The unit vector $\hat{\mathbf{a}}$ strips out magnitude and keeps only direction, which is why its components are the direction cosines.
+- The unit vector $\hat{\mathbf{a}}$ strips out magnitude and keeps only direction, which is why its components are the direction cosines — followed up in [[Unit vectors]].
+- Scaling and addition are here, but *multiplying* two vectors is a separate operation with its own note — [[Scalar Product]], which also turns the magnitude above into $\sqrt{\vec{a}\cdot\vec{a}}$.
+- The second way of multiplying them, returning a vector rather than a number: [[Vector Product]].
 - Differentiating componentwise means every rule from [[chain-rule|differentiation]] applies one component at a time.

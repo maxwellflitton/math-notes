@@ -32,6 +32,7 @@ Equations relating a function to its own derivatives. Part of [[Home]].
 ## Tools it depends on
 - Integration: [[Direct Integration]] leans on [[exponents]] and [[by-substitution]]; the integrating factor in [[Linear Differential Equations]] is the [[product rule]] read backwards.
 - Exponentials and logs: [[exp-algebria-rules]].
+- Why the $e^{\lambda x}$ guess is the natural one rather than a trick: [[eigen]].
 - Limits: the $\delta \to 0$ step in [[First order differential equations]] is [[lim-zero-example]].
 
 ## Related

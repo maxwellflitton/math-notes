@@ -131,5 +131,6 @@ $$
 	- $b^2 - 4ac = 0$ — equal roots, where Theorem 1 fails and the $(C + Dx)e^{\lambda x}$ fix is needed (also in [[Complex conjugate roots]]).
 - Physical reading of the same three cases — under-, over- and critically damped: [[dampened harmonic oscillator]].
 - Why $e^{\lambda t}$ is the right guess (it is its own derivative, and never zero, so it cancels): [[exp-algebria-rules]].
+- The structural reason the guess works: $e^{\lambda x}$ is an eigenfunction of $\frac{d}{dx}$, so the auxiliary equation is an eigenvalue equation — [[eigen]].
 - Differentiating $e^{\lambda t}$ to $\lambda e^{\lambda t}$ is [[chain-rule|the chain rule]].
 - Euler's formula $e^{ix} = \cos x + i\sin x$ turns the complex exponentials into the trig pair — the same identity that proves the [[compound angle formula|compound angle formulae]].

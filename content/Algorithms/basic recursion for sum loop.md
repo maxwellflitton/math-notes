@@ -205,3 +205,5 @@ With that, the recurrence works right down to $n=1$: it gives $1 = 1 + 0$, and n
 - $S(n) = \frac{n(n+1)}{2}$ is the discrete twin of $\int_0^n x\,dx = \frac{n^2}{2}$ — summing unit steps versus integrating continuously. See [[Calculus]] and [[Direct Integration]].
 - A recurrence *is* a difference equation: shrink the step and $\frac{p(t + \delta t) - p(t)}{\delta t}$ becomes $\frac{dp}{dt}$, which is how [[First order differential equations]] gets started — the limit itself is [[lim-zero-example]].
 - Summation and set-builder notation are unpacked in [[sets]]; the index algebra behind $\frac{2n + n^2 - n}{2}$ is [[exp-algebria-rules]].
+- The same move on a different loop: [[Cylinder]] derives a closed form for each buffer slot, so the mesh is computed per index instead of by iterating — and proves its edge set redundant by double inclusion rather than by induction.
+
