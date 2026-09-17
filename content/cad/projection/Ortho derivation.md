@@ -10,12 +10,9 @@ topic: orthographic projection
 
 Part of [[CAD Geometry]]. The engine's actual matrices, built from this derivation, are in [[Ortho Application]].
 
-> [!info] How to read this
-> This follows the handwritten notes (pages 1–7), with errors corrected in place. Everything after the end of page 7 is marked **Added** and finishes the derivation.
-
 ---
 
-## 1. Along and across (page 1)
+## 1. Along and across
 
 Take the [[Unit vectors|unit vector]] $\hat{e}$, so $\hat{e} \cdot \hat{e} = 1$. Any vector $\vec{p}$ can be written as a piece parallel to $\hat{e}$ plus a piece perpendicular to it:
 
@@ -73,7 +70,7 @@ Because we are looking directly down the $z$ axis with $\hat{e}$, the $x, y$ is 
 
 ---
 
-## 2. Matrix form (pages 2–3)
+## 2. Matrix form
 
 What we can say is the following:
 
@@ -341,9 +338,6 @@ $$
 and we can see that $R$ has vanished.
 
 ---
-
-> [!info] Added from here on
-> Everything below finishes the derivation from where page 7 stops.
 
 The same happens for $y_{c}$, since $\vec{e} \cdot \vec{u}' = 0$:
 
