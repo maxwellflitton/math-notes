@@ -8,6 +8,8 @@ topic: orthographic projection
 
 # Orthographic projection derivation
 
+Part of [[CAD Geometry]]. The engine's actual matrices, built from this derivation, are in [[Ortho Application]].
+
 > [!info] How to read this
 > This follows the handwritten notes (pages 1–7), with errors corrected in place. Everything after the end of page 7 is marked **Added** and finishes the derivation.
 
@@ -15,7 +17,7 @@ topic: orthographic projection
 
 ## 1. Along and across (page 1)
 
-Take the unit vector $\hat{e}$, so $\hat{e} \cdot \hat{e} = 1$. Any vector $\vec{p}$ can be written as a piece parallel to $\hat{e}$ plus a piece perpendicular to it:
+Take the [[Unit vectors|unit vector]] $\hat{e}$, so $\hat{e} \cdot \hat{e} = 1$. Any vector $\vec{p}$ can be written as a piece parallel to $\hat{e}$ plus a piece perpendicular to it:
 
 $$
 \vec{p} = \underbrace{(\vec{p} \cdot \vec{e})\,\vec{e}}_{\text{along } e} + \underbrace{\vec{p} - (\vec{p} \cdot \vec{e})\,\vec{e}}_{\text{across } e}
@@ -27,7 +29,7 @@ $$
 \vec{p} \cdot \vec{e} = |\vec{p}|\,|\vec{e}| \cos\theta = |\vec{p}| \cos\theta
 $$
 
-This scalar is the length of $\vec{p}$'s shadow along $\vec{e}$, so $(\vec{p} \cdot \vec{e})\,\vec{e}$ is the projection of $\vec{p}$ in the direction of $\vec{e}$. This means we can have the following:
+This scalar is the length of $\vec{p}$'s shadow along $\vec{e}$, so $(\vec{p} \cdot \vec{e})\,\vec{e}$ is the projection of $\vec{p}$ in the direction of $\vec{e}$ (see [[Scalar Product]]). This means we can have the following:
 
 $$
 \vec{p}_{\parallel} = (\vec{p} \cdot \vec{e})\,\vec{e}
@@ -45,7 +47,7 @@ $$
 \vec{p}_{\perp} = \vec{p} - (\vec{p} \cdot \vec{e})\,\vec{e}
 $$
 
-We can prove this with the scalar (dot) product of $\vec{p}_{\perp}$ with $\hat{e}$, since two vectors are perpendicular exactly when their dot product is zero:
+We can prove this with the [[Scalar Product|scalar (dot) product]] of $\vec{p}_{\perp}$ with $\hat{e}$, since two vectors are perpendicular exactly when their dot product is zero:
 
 $$
 \vec{p}_{\perp} \cdot \vec{e} = \vec{p} \cdot \vec{e} - (\vec{p} \cdot \vec{e})(\vec{e} \cdot \vec{e})
@@ -172,7 +174,7 @@ $$
 
 > [!info] the two properties
 > $$\Pi_{e}\,e = e - e(e^{T}e) = e - e = 0$$
-> Sliding a point along the line of sight doesn't change where it lands, so $\Pi_{e}$ has no inverse — depth can't be recovered from the image.
+> Sliding a point along the line of sight doesn't change where it lands, so $\Pi_{e}$ has no inverse — depth can't be recovered from the image. In [[eigen]] terms, $e$ is an eigenvector with eigenvalue $0$.
 > $$\Pi_{e}^{2} = I - 2ee^{T} + e(e^{T}e)e^{T} = I - ee^{T} = \Pi_{e}$$
 > Projecting twice does nothing new. $P^{2} = P$ makes it a projection; being symmetric makes it an *orthogonal* projection.
 
@@ -191,7 +193,7 @@ $$
 \vec{r} \cdot \vec{e} = 0, \qquad \vec{u}' \cdot \vec{e} = 0, \qquad \vec{r} \cdot \vec{u}' = 0, \qquad |\vec{r}| = |\vec{u}'| = 1
 $$
 
-This basically means that we have two unit vectors orthogonal to each other, with no component along $\vec{e}$ (both lie in the image plane). Together with $\vec{e}$, the three form an **orthonormal basis** — the camera's own set of axes, a datum that moves with the camera.
+This basically means that we have two unit vectors orthogonal to each other, with no component along $\vec{e}$ (both lie in the image plane). Together with $\vec{e}$, the three form an **orthonormal basis** (see [[Scalar Product]]) — the camera's own set of axes, a datum that moves with the camera.
 
 We go back to step one again, but with a rotated set of axes, and split in all three directions:
 
@@ -240,7 +242,7 @@ $$
 $$
 
 > [!info] Added — why the construction works
-> - A cross product is perpendicular to both inputs. So $\vec{r} \perp \vec{f}$ (it lies in the image plane) and $\vec{r} \perp \vec{u}$ (it points sideways).
+> - A [[Vector Product|cross product]] is perpendicular to both inputs. So $\vec{r} \perp \vec{f}$ (it lies in the image plane) and $\vec{r} \perp \vec{u}$ (it points sideways).
 > - $\vec{r}$ needs normalising because $|\vec{f} \times \vec{u}| = |\vec{f}|\,|\vec{u}| \sin\theta$, and the hint may not be unit length or perpendicular to $\vec{f}$.
 > - $\vec{u}'$ needs no normalising: $\vec{r}$ and $\vec{f}$ are perpendicular unit vectors, so $|\vec{r} \times \vec{f}| = (1)(1)\sin 90^{\circ} = 1$.
 > - Only the across part of the hint matters. The along part dies because $\vec{f} \times \vec{f} = \vec{0}$. E.g. $\vec{u} = (0, 1, 5)$ gives the same $\vec{r}$ as $\vec{u} = (0, 1, 0)$ when $\vec{f} = (0, 0, -1)$.
@@ -266,7 +268,7 @@ $$
 
 > [!note] Remember
 > - $\vec{e}$ points **backwards** (out of the screen). Forward is $\vec{f} = -\vec{e}$.
-> - This matrix is a **rotation**, not a projection. It keeps all three coordinates — nothing is thrown away yet. World point in, camera-space point out.
+> - This matrix is a **rotation**, not a projection (the 3D relative of the 2D rotation matrix in [[compound angle formula]]). It keeps all three coordinates — nothing is thrown away yet. World point in, camera-space point out.
 
 ---
 
@@ -275,7 +277,7 @@ $$
 Finally we apply the offset of the camera/eye to the view matrix. $\vec{E}$ is the eye position (a point) and $R$ is the scalar orbit radius.
 
 > [!note] Watch the notation
-> - $\vec{E}$ (capital) = eye **position**. $\vec{e}$ (lower case) = unit view **direction**.
+> - $\vec{E}$ (capital) = eye **position**, a [[Displacement vs Position Vectors|position vector]]. $\vec{e}$ (lower case) = unit view **direction**.
 > - $R$ = orbit radius, a scalar (distance from target to eye).
 > - $\vec{t}$ = target, the point the camera orbits and looks at.
 
@@ -424,6 +426,7 @@ The view matrix gives camera space but throws nothing away. The **projection** m
 
 > [!note] Check this against the text
 > This section is written ahead of the text's own step 5. The idea will be the same; the text may use off-centre bounds $(l, r, b, t)$ instead of a centred $w, h$.
+> The engine's version is in [[Ortho Application#3. The projection matrix]]: it is this matrix with $n = 0$, $f = 10^4$.
 
 For a view centred on the camera:
 
@@ -473,6 +476,8 @@ $$
 
 Read right to left: $V$ moves the point into camera space, then $P$ scales it into the clip box. The order matters, because $PV \neq VP$.
 
+The product written out with the engine's numbers, the map to pixels and the inverse used for picking are in [[Ortho Application]].
+
 | Matrix | What it does | Changes when |
 | --- | --- | --- |
 | $V$ (view) | Rotates and shifts world points into camera space | The user orbits or pans |
@@ -505,3 +510,11 @@ Use these when hand-writing the matrices. A sign error is hard to see on screen 
 - $(3, -2, -3)$ → $(0.6, -0.4, 0.1)$
 - $z_{c} = -1$ → depth $0$
 - $z_{c} = -21$ → depth $1$
+---
+
+## Related
+
+- [[Ortho Application]] — the engine's $V$, $P$ and $PV$, the pixel map, row form and picking.
+- Vector tools used here: [[Unit vectors]], [[Scalar Product]], [[Vector Product]], [[Displacement vs Position Vectors]].
+- Matrix ideas: [[eigen]], [[compound angle formula]].
+- [[CAD Geometry]], [[Linear Algebra]]

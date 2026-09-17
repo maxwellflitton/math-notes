@@ -6,7 +6,7 @@ created: 2026-09-16
 
 # Orthographic Projection Application
 
-Every matrix of the orthographic camera, put together.
+Every matrix of the orthographic camera, put together. Each piece is derived step by step in [[Ortho derivation]]. Part of [[CAD Geometry]].
 
 ---
 
@@ -46,7 +46,7 @@ That single fact is what makes the projection orthographic.
 
 ## 2. The view matrix
 
-Rows are the camera axes, the last column is the shift to the eye measured along those axes:
+Rows are the camera axes, the last column is the shift to the eye measured along those axes (derived in [[Ortho derivation#4. Measure from the eye: the full view matrix]]):
 
 $$
 V =
@@ -77,7 +77,7 @@ Eye distance and eye position:
 
 $$R = \max\big(d,\ \max(1.5\,s,\ 10)\big), \qquad \mathbf{E} = \mathbf{t} + R\,\mathbf{e}$$
 
-Camera axes:
+Camera axes (see [[Ortho derivation#Fixing the roll]] for why this construction works):
 
 $$\mathbf{f} = -\mathbf{e}, \qquad \mathbf{r} = \frac{\mathbf{f}\times\mathbf{u}}{\lVert \mathbf{f}\times\mathbf{u} \rVert}, \qquad \mathbf{u}' = \mathbf{r}\times\mathbf{f}$$
 
@@ -102,6 +102,8 @@ P =
 \end{pmatrix}
 $$
 
+This is the general matrix from [[Ortho derivation#6. The orthographic projection matrix]] with near plane $n = 0$ and far plane $f = 10^4$.
+
 ---
 
 ## 4. The product $PV$
@@ -118,7 +120,7 @@ u'_x/h & u'_y/h & u'_z/h & -\mathbf{u}'\cdot\mathbf{t}\,/\,h \\
 \end{pmatrix}
 $$
 
-The last column uses the following (because $\mathbf{E} = \mathbf{t} + R\,\mathbf{e}$ and $\mathbf{r},\mathbf{u}' \perp \mathbf{e}$, $\lVert\mathbf{e}\rVert = 1$):
+The last column uses the following, shown in [[Ortho derivation#The eye drops out of the screen position]] (because $\mathbf{E} = \mathbf{t} + R\,\mathbf{e}$ and $\mathbf{r},\mathbf{u}' \perp \mathbf{e}$, $\lVert\mathbf{e}\rVert = 1$):
 
 $$\mathbf{r}\cdot\mathbf{E} = \mathbf{r}\cdot\mathbf{t}, \qquad \mathbf{u}'\cdot\mathbf{E} = \mathbf{u}'\cdot\mathbf{t}, \qquad \mathbf{e}\cdot\mathbf{E} = \mathbf{e}\cdot\mathbf{t} + R$$
 
@@ -158,7 +160,7 @@ Same numbers, same order of application, but:
 - the shift runs along the **bottom row**.
 
 > [!note]
-> When comparing a matrix in these notes against the source code, transpose it.
+> When comparing a matrix in these notes against the source code, transpose it. See also the "Rows vs columns" note in [[Ortho derivation#4. Measure from the eye: the full view matrix]].
 
 ---
 
@@ -172,9 +174,19 @@ $$
 \lambda = R - 10^4\,z_{\text{ndc}}
 $$
 
+This is only possible because depth is kept. Compare $\Pi_{e}$ in [[Ortho derivation#The projection matrix]], which throws depth away and has no inverse.
+
 Leave $\lambda$ free and this is the **pick line** for that pixel.
 
 - Every pick line points along $-\mathbf{e}$.
 - Only where the line starts moves with the pixel.
 
 That parallel family of lines is the orthographic signature, and the reason orthographic picking algorithms are shorter than perspective ones.
+
+---
+
+## Related
+
+- [[Ortho derivation]] — where every matrix on this page comes from.
+- [[Scalar Product]], [[Vector Product]] — the dot and cross products used throughout.
+- [[CAD Geometry]], [[Linear Algebra]]
