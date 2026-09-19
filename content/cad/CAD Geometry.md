@@ -13,6 +13,7 @@ The curves and surfaces this vault is aimed at. Part of [[Home]].
 
 ## Mesh algorithms
 - [[Cylinder]] — building a triangle mesh for a cylinder: the vertex and face arrays, edges as derived data ($E = \partial F$), and the closed form for both.
+- [[Sphere]] — the UV sphere: a quarter-circle sweep rotated into rings, exact buffer capacities from one input $n_s$, and the Euler check $\chi = 2$.
 
 ## Projection
 - [[Ortho derivation]] — orthographic projection from first principles: splitting a vector along and across the view, the camera axes, the view matrix and the projection matrix.

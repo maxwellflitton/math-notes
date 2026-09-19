@@ -72,5 +72,6 @@ $\sqrt{4\pi}/2^{n}$ rad:
 - Each direction cosine is a dot product against a basis vector, $\cos\theta_x = \hat{\imath}\cdot\hat{\mathbf{a}}$, and the unit vector is what makes projection $\hat{a}\cdot\vec{b}$ meaningful — [[Scalar Product]].
 - One way to *produce* a unit vector rather than normalise one: the $\hat{n}$ of [[Vector Product]] is the unit normal to the plane of two vectors.
 - A direction that arrives already normalised rather than needing it: the ring of [[Cylinder]] is $R(\cos\theta, \sin\theta, 0)$, a unit vector scaled to the radius.
+- On the unit sphere of [[Sphere]] every vertex position *is* a unit vector, and therefore its own outward normal — no separate normal buffer is needed.
 - Recovering $\theta_z = \arccos(\pm\sqrt{\dots})$ leans on $\arccos$ being a genuine inverse on $[0,\pi]$, the principal-branch machinery from [[Trigonometry]]. The identity $\cos^2\theta_x + \cos^2\theta_y + \cos^2\theta_z = 1$ is the 3D direction-cosine analogue of $\cos^2\theta + \sin^2\theta = 1$.
 - The record layout and quantisation tables are here because [[CAD Geometry]] is what stores millions of these — the endpoint tangents $\mathbf{B}'(0) = n(\mathbf{P}_1 - \mathbf{P}_0)$ of [[Bezier Curves]] are exactly the directions being packed.

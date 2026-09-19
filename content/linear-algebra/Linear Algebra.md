@@ -27,6 +27,7 @@ Space, distance and the objects living in it. Part of [[Home]].
 - Rotations of the plane are linear maps on [[Euclidean space]] — that fact is what proves the [[compound angle formula|compound angle formulae]] for all angles.
 - [[Scalar Product]], [[Vector Product]] and [[eigen]] come together in the camera matrices of [[Ortho derivation]] and [[Ortho Application]].
 - The slope $m$ in [[Lines]] is the constant-rate special case of the derivative — see [[lim-zero-example]].
+- Matrices over Booleans, with OR as addition and AND as multiplication: the transitive closure $A^* = I \lor A \lor A^2 \lor \cdots$ in [[Bitset Auth]].
 
 ## Open
 - [ ] Dot/cross products, matrices and transformations.

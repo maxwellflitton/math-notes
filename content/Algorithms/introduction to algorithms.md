@@ -57,5 +57,6 @@ For this introduction the professor states that there isn't an efficient solutio
 - Nearest neighbour is greedy: it takes the best local step and never reconsiders, which is why one counterexample is enough to sink it. Exhaustive search is correct but pays $n!$ for it.
 - Proving a cost function's closed form, and the induction that turns "no counterexample found" into an actual proof: [[basic recursion for sum loop]].
 - A worked example of the picture → pseudocode → code ordering on a real algorithm, ending in a closed form: [[Cylinder]].
+- A small algorithm where correctness is the whole point — one wrong operator is a privilege escalation: [[Bitset Auth]].
 - Part of [[Home]].
 

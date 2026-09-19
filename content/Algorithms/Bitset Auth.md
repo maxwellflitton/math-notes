@@ -361,3 +361,16 @@ fn none_of(u: u8, n: u8) -> bool { u & n == 0 }
 | $\land$ | bitwise AND (intersection) |
 | $\lnot$ | bitwise NOT (complement) |
 | $\subseteq$ | subset, tested as `x & y == x` |
+
+---
+
+## Connections
+- Sits with [[introduction to algorithms]]: the problem is only solvable because "does this user count as a nurse?" is well specified by the closure $\uparrow r$. The OR-versus-addition warning is that note's method in action — one counterexample, $\texttt{001010} + \texttt{010010}$ switching Doctor on, is enough to rule addition out.
+- The whole note is set theory written in binary — [[sets]]. $\uparrow r = \{s : r \le s\}$ is set-builder notation, $P \subseteq R \times R$ is a subset of a Cartesian product, and $\lor$, $\land$, $\lnot$ are $\cup$, $\cap$ and complement one bit at a time.
+- $\bigvee$ is to OR what $\sum$ is to addition, and the empty OR being $0$ (the nurse with no grades) is the same convention as the empty sum in [[basic recursion for sum loop]]. The fixed point $m_{k+1}(r)$ is a recurrence, and the single index-order sweep is what lets it be computed in one pass.
+- Atoms $a(r) = 2^{\iota(r)}$ are distinct powers of two, so their binary expansions share no bits — which is why OR and $+$ agree on atoms and only diverge once masks overlap. Index laws: [[exp-algebria-rules]].
+- A bitset is a vector of 0s and 1s, and $U \land Q$ followed by a popcount is the dot product over $\{0, 1\}$. The none-of check $U \land N = 0$ is literally orthogonality — [[Scalar Product]].
+- $A$ is a Boolean matrix, and $A^* = I \lor A \lor A^2 \lor \cdots$ is ordinary matrix powers with OR in place of $+$ and AND in place of $\times$; lower-triangular is what makes a single sweep enough. See [[Linear Algebra]].
+- Pay once so the hot path is arithmetic on an integer: the closure here runs at startup exactly as the closed form in [[Cylinder]] replaces a loop, so the per-request check never walks the tree.
+- Part of [[Home]].
+

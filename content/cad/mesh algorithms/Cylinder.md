@@ -193,5 +193,6 @@ Both loops can run in different threads or on a GPU.
 - Proving $E = \partial F$ by two inclusions — no junk, no gaps — is the set-theoretic sibling of the induction in [[basic recursion for sum loop]]; both replace a loop with something you can evaluate directly once you have proved the loop was doing nothing else.
 - Deriving $V[k]$ and `FaceCorner` is exactly that closed-form move: $O(1)$ per element instead of walking the loop, which is also what makes both loops independent enough to run on a GPU.
 - Picture, then pseudocode, then code is the order of description set out in [[introduction to algorithms]] — this note follows it top to bottom.
+- The closed version of the same construction: [[Sphere]] stacks these rings along a latitude sweep and caps them with pole fans, which is what makes its Euler characteristic $2$ rather than $0$.
 - Part of [[Home]].
 
