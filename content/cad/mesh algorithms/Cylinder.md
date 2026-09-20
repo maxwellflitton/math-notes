@@ -10,7 +10,7 @@ created: 2026-09-13
 
 ## 1. The algorithm
 
-![[cylinder-mesh-diagram.svg]]
+![Cylinder mesh: two rings of n vertices, one quad of the wall split into two triangles](_attachments/cylinder-mesh-diagram.svg)
 
 ```
 Precondition: n ≥ 3

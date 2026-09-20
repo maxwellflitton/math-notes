@@ -23,7 +23,7 @@ Unit sphere primitive for the CAD renderer. Built by sweeping a quarter circle f
 
 The sweep has $n_s$ nodes from equator to pole inclusive. Excluding the pole gives $n_s - 1$ rings per hemisphere; the equator is shared, so $\rho = 2(n_s - 1) - 1 = 2n_s - 3$.
 
-![[uv-sphere-sweep-geometry.svg]]
+![Quarter-circle sweep from equator to pole, rotated into rings of n_r vertices](_attachments/uv-sphere-sweep-geometry.svg)
 
 ## Sweep geometry
 
@@ -102,7 +102,7 @@ $$
 V_c = \underbrace{n_r}_{\text{per ring}}\cdot\underbrace{\rho}_{\text{rings}} + \underbrace{2}_{\text{poles}}
 $$
 
-![[uv-sphere-buffer-layout.svg]]
+![Position buffer layout: north pole, northern rings, equator, southern rings, south pole](_attachments/uv-sphere-buffer-layout.svg)
 
 Ring $m$ ($0 \le m < \rho$) starts at slot $1 + m\,n_r$. Its latitude is $k = |e - m|$, with $z$ negated for $m > e$. The equator starts at
 
