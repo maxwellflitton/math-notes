@@ -372,5 +372,7 @@ fn none_of(u: u8, n: u8) -> bool { u & n == 0 }
 - A bitset is a vector of 0s and 1s, and $U \land Q$ followed by a popcount is the dot product over $\{0, 1\}$. The none-of check $U \land N = 0$ is literally orthogonality — [[Scalar Product]].
 - $A$ is a Boolean matrix, and $A^* = I \lor A \lor A^2 \lor \cdots$ is ordinary matrix powers with OR in place of $+$ and AND in place of $\times$; lower-triangular is what makes a single sweep enough. See [[Linear Algebra]].
 - Pay once so the hot path is arithmetic on an integer: the closure here runs at startup exactly as the closed form in [[Cylinder]] replaces a loop, so the per-request check never walks the tree.
+- The same operators read the other way round. In [[Bit Encoding]] the fields are disjoint, so $\lor$ concatenates and overlap is the bug; here masks are meant to overlap, and $\lor$ is union. Both pack structure into one integer so the hot path is arithmetic.
+- Atoms $a(r) = 2^{\iota(r)}$ are single columns of place value, and `1 << \iota(r)` is the shift — [[Binary Numbers]].
 - Part of [[Home]].
 

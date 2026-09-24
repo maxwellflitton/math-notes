@@ -206,4 +206,5 @@ With that, the recurrence works right down to $n=1$: it gives $1 = 1 + 0$, and n
 - A recurrence *is* a difference equation: shrink the step and $\frac{p(t + \delta t) - p(t)}{\delta t}$ becomes $\frac{dp}{dt}$, which is how [[First order differential equations]] gets started — the limit itself is [[lim-zero-example]].
 - Summation and set-builder notation are unpacked in [[sets]]; the index algebra behind $\frac{2n + n^2 - n}{2}$ is [[exp-algebria-rules]].
 - The same move on a different loop: [[Cylinder]] derives a closed form for each buffer slot, so the mesh is computed per index instead of by iterating — and proves its edge set redundant by double inclusion rather than by induction.
+- The geometric twin of $1 + 2 + \cdots + n$: $\sum_{k=0}^{n-1} 2^k = 2^n - 1$, which is why a mask of $k$ ones is $2^k - 1$ and why an $n$-bit type stops at $2^n - 1$ — [[Binary Numbers]].
 - The empty-sum convention has an OR twin: an empty $\bigvee$ is $0$, which is exactly why a user with no grades gets an all-zero mask and can never pass a check — [[Bitset Auth]].

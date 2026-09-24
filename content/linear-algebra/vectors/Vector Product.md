@@ -118,8 +118,7 @@ They are complements: one detects agreement, the other detects independence.
 - The same test states the eigenvector condition geometrically: $\mathbf{v}$ is an eigenvector of $A$ exactly when $A\mathbf{v} \times \mathbf{v} = \vec{0}$, i.e. $A$ leaves its direction alone — [[eigen]].
 - Anticommutativity is why winding order decides which face of a surface is the front, and the normal is what lighting and offsetting are computed against — [[CAD Geometry]], with the tangent directions coming from [[Bezier Curves]].
 - The faces of [[Cylinder]] are index triples written in a fixed order; that order is what a renderer crosses two edge vectors to turn into an outward normal.
+- The coordinate recipe, $\vec{a}\times\vec{b} = (a_yb_z - a_zb_y,\ a_zb_x - a_xb_z,\ a_xb_y - a_yb_x)$, with the minors read as shadow areas and a worked example: [[Determinant (cofactor) form of the cross product|determinant form of the cross product]].
+- Dotting the normal against a third vector measures the height above the spanned parallelogram, turning the area into the volume of a parallelepiped — [[Volumes and the scalar triple product]].
 - Part of [[Home]].
-
-## Open
-- [ ] The component/determinant form $\vec{a}\times\vec{b} = (a_yb_z - a_zb_y,\ a_zb_x - a_xb_z,\ a_xb_y - a_yb_x)$ — the counterpart to the component form derived in [[Scalar Product]].
 

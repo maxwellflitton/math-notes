@@ -272,4 +272,5 @@ assert w = I_c
 - For $R = 1$ every $P_{k,i}$ is its own outward unit normal — [[Unit vectors]] — and the positions are the component-form vectors of [[Basic Operations]].
 - $V_c$, $E_c$, $F_c$, $I_c$ are closed-form counts fixed *before* the loop runs, so buffers are allocated once and `assert w = I_c` proves the fill was exact — the same move as the closed form in [[basic recursion for sum loop]] and in [[Cylinder]].
 - Precondition, tables, then one loop with no trig, division or modulo is the picture → pseudocode → code order from [[introduction to algorithms]].
+- Once the mesh is in a buffer it needs a name the GPU can write into a pixel: one `u32` holding the kind and the slot index — [[Bit Encoding]].
 - Part of [[Home]].

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 290" width="460" height="290" font-family="Georgia, serif">
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+<path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker></defs>
+<rect width="460" height="290" fill="white"/>
+<text x="230.0" y="26" text-anchor="middle" font-size="16" fill="#111">Figure 2 — cube, c is perpendicular to the base</text>
+<polygon points="140.0,240.0 232.0,240.0 282.6,210.6 190.6,210.6" fill="#cfe3c9" stroke="#1d4ed8" stroke-width="1.5"/>
+<polygon points="140.0,148.0 232.0,148.0 282.6,118.6 190.6,118.6" fill="#eef2f7" stroke="#111" stroke-width="1.2"/>
+<polygon points="140.0,240.0 232.0,240.0 232.0,148.0 140.0,148.0" fill="none" stroke="#111" stroke-width="1.2"/>
+<polygon points="232.0,240.0 282.6,210.6 282.6,118.6 232.0,148.0" fill="none" stroke="#111" stroke-width="1.2"/>
+<line x1="190.6" y1="210.6" x2="190.6" y2="118.6" stroke="#111" stroke-width="1.2" stroke-dasharray="6,5"/>
+<path d="M140.0,231.0 L149.0,231.0 L149.0,240.0" fill="none" stroke="#b91c1c" stroke-width="1"/>
+<text x="132.0" y="195.0" text-anchor="end" font-size="15" font-style="italic" fill="#b91c1c">h = |c| = 2</text>
+<line x1="140.0" y1="240.0" x2="232.0" y2="240.0" stroke="#1d4ed8" stroke-width="2.4" marker-end="url(#arr)"/>
+<text x="236.0" y="262.0" font-size="17" font-weight="bold" fill="#1d4ed8">a</text>
+<text x="250.0" y="262.0" font-size="13" fill="#1d4ed8">= (2, 0, 0)</text>
+<line x1="140.0" y1="240.0" x2="190.6" y2="210.6" stroke="#1d4ed8" stroke-width="2.4" marker-end="url(#arr)"/>
+<text x="176.6" y="234.6" font-size="17" font-weight="bold" fill="#1d4ed8">b</text>
+<text x="190.6" y="234.6" font-size="13" fill="#1d4ed8">= (0, 2, 0)</text>
+<line x1="140.0" y1="240.0" x2="140.0" y2="148.0" stroke="#1d4ed8" stroke-width="2.4" marker-end="url(#arr)"/>
+<text x="70.0" y="140.0" font-size="17" font-weight="bold" fill="#1d4ed8">c</text>
+<text x="84.0" y="140.0" font-size="13" fill="#1d4ed8">= (0, 0, 2)</text>
+<circle cx="140.0" cy="240.0" r="3" fill="#111"/>
+<text x="126.0" y="258.0" font-size="13" fill="#111">O</text>
+<rect x="222.0" y="266" width="12" height="12" fill="#cfe3c9" stroke="#1d4ed8"/>
+<text x="240.0" y="277" font-size="13" fill="#2d5a27">base: |a × b| = 4</text>
+</svg>

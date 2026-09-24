@@ -16,6 +16,7 @@ The prerequisite layer — notation and algebra that the rest of the vault assum
 - The index laws in [[exp-algebria-rules]] are what let you collapse $e^{\alpha x}e^{i\beta x}$ in [[Complex conjugate roots]], exponentiate $\ln|p| = rt + C$ in [[First order differential equations]], and combine logs in [[population-example]].
 - $\frac{d}{dx}e^x = e^x$ is why the exponential is the trial solution in [[linear homogenious equations]].
 - Integration reference tables that lean on these: [[exponents]], [[trig]].
+- Positional notation in base 2, where the index laws become shifts and masks: [[Binary Numbers]].
 
 ## Related
 - [[Trigonometry]] — the other "toolkit" area.

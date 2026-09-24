@@ -77,5 +77,6 @@ in [[linear homogenious equations]], and why splitting $e^{(\alpha + \beta i)x} 
 - Integration tables that apply these rules directly: [[exponents]] (including the $\int x^{-1} = \ln|x|$ gap) and [[trig]].
 - Every ODE note leans on the log laws to exponentiate a solution: [[Direct Integration]], [[Linear Differential Equations]], [[population-example]].
 - Chosen as $u$ or $dv$ in worked integrals: [[by-parts]], [[by-substitution]].
+- The product law is what makes shifting compose, $(x \ll a) \ll b = x \ll (a+b)$, and $\lfloor \log_2 N \rfloor + 1$ is the width of a number in bits — [[Binary Numbers]], applied in [[Bit Encoding]].
 - $\frac{d}{dx}e^{kx} = ke^{kx}$ says $e^{kx}$ is an eigenfunction of differentiation, with eigenvalue $k$ — [[eigen]].
 - $e^{i\theta} = \cos\theta + i\sin\theta$ gives the one-line proof in [[compound angle formula]].

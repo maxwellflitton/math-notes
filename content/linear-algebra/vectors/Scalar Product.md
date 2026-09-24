@@ -347,6 +347,7 @@ Orthogonality still means the product is zero. This is the entire foundation of 
 - Testing tangent continuity where two curves join is a dot-product test on their end tangents — [[Bezier Curves]], [[CAD Geometry]].
 - The function-space inner product $\langle f, g\rangle = \int_a^b f g\,dx$ is an ordinary definite integral: [[Calculus]].
 - The other product: [[Vector Product]] returns a vector instead of a number, is maximal where this one vanishes, and measures spanned area rather than alignment.
+- Dot gives $\cos\theta$, the $2\times2$ determinant gives $\sin\theta$ with the same $|\vec{u}||\vec{v}|$ in front, and `atan2(det, dot)` recovers the signed angle — the [[Determinant (cofactor) form of the cross product|determinant form of the cross product]].
 - Over 0/1 vectors the dot product is AND-then-count, so two bitsets are orthogonal exactly when they share no bits — the deny-list check in [[Bitset Auth]].
 - Part of [[Home]].
 

@@ -194,5 +194,6 @@ Both loops can run in different threads or on a GPU.
 - Deriving $V[k]$ and `FaceCorner` is exactly that closed-form move: $O(1)$ per element instead of walking the loop, which is also what makes both loops independent enough to run on a GPU.
 - Picture, then pseudocode, then code is the order of description set out in [[introduction to algorithms]] — this note follows it top to bottom.
 - The closed version of the same construction: [[Sphere]] stacks these rings along a latitude sweep and caps them with pole fans, which is what makes its Euler characteristic $2$ rather than $0$.
+- Once the mesh is in a buffer it needs a name the GPU can write into a pixel: one `u32` holding the kind and the slot index — [[Bit Encoding]].
 - Part of [[Home]].
 

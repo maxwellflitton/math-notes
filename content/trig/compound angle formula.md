@@ -523,4 +523,5 @@ Same amplitude, and the ratio is simply flipped relative to the sine form. The t
 - The Euler-formula proof is the same algebra as the complex exponential solutions in [[Complex conjugate roots]].
 - The shortest proof of all: dot two unit vectors at angles $A$ and $B$ — $\hat{a}\cdot\hat{b}$ is $\cos A\cos B + \sin A\sin B$ by components and $\cos(A-B)$ by definition. See [[Scalar Product]].
 - At $B = 90°$ the formulae reduce to a swap and a sign flip, $(\cos\theta, \sin\theta) \to (-\sin\theta, \cos\theta)$ — [[Sphere]] uses that to fill three quadrants of its azimuth table from one, bit-exactly.
+- Step 6's $\operatorname{atan2}(C, D)$ is the same quadrant fix as `atan2(det, dot)` for the angle between two vectors — determinant for the sine part, dot product for the cosine part: [[Determinant (cofactor) form of the cross product|determinant form of the cross product]].
 - The rotation-matrix proof is the composition of two rotations in [[Euclidean space]].

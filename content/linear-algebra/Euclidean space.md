@@ -10,4 +10,5 @@ $$
 - Rotating this space is a linear map, and composing two rotations is the cleanest proof of the [[compound angle formula|compound angle formulae]].
 - It is the space every curve in [[CAD Geometry]] lives in — control points, the convex hull property and endpoint tangents of [[Bezier Curves]] all assume this straight-line metric.
 - The straight-line metric is not an extra assumption on top of the algebra: it *is* $|\vec{a}| = \sqrt{\vec{a}\cdot\vec{a}}$, defined in [[Scalar Product]].
+- Area comes out of the algebra too: a $2\times2$ determinant is the signed area of a parallelogram, and a 3D area is Pythagoras over its three coordinate-plane shadows — [[Determinant (cofactor) form of the cross product|determinant form of the cross product]].
 - The $\sqrt{a^2 + b^2}$ pattern reappears as the amplitude $R = \sqrt{a^2+b^2}$ in the $R$-formula — it is the same Pythagorean distance.
