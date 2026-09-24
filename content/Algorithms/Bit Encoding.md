@@ -82,11 +82,13 @@ $$\texttt{0100 0000 \ldots 0101} \gg 29 = \texttt{010} = 2 \;\Rightarrow\; \text
 
 **Index.** AND with the mask clears the top three columns and keeps the rest:
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 &\texttt{0100 0000 0000 0000 0000 0000 0000 0101} \\
 \land\;&\texttt{0001 1111 1111 1111 1111 1111 1111 1111} \\
 =\;&\texttt{0000 0000 0000 0000 0000 0000 0000 0101} = 5
-\end{aligned}$$
+\end{aligned}
+$$
 
 The pair goes in and the same pair comes out. Formally the map
 
