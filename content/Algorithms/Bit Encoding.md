@@ -78,7 +78,7 @@ On `0x4000_0005`:
 
 **Kind.** Shifting right by 29 drops the 29 index columns off the bottom and leaves the top three:
 
-$$\texttt{0100 0000 \ldots 0101} \gg 29 = \texttt{010} = 2 \;\Rightarrow\; \texttt{Kind::Sphere}$$
+$$\texttt{0100 0000} \ldots \texttt{0101} \gg 29 = \texttt{010} = 2 \;\Rightarrow\; \texttt{Kind::Sphere}$$
 
 **Index.** AND with the mask clears the top three columns and keeps the rest:
 
