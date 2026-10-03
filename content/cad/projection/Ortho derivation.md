@@ -510,5 +510,5 @@ Use these when hand-writing the matrices. A sign error is hard to see on screen 
 
 - [[Ortho Application]] — the engine's $V$, $P$ and $PV$, the pixel map, row form and picking.
 - Vector tools used here: [[Unit vectors]], [[Scalar Product]], [[Vector Product]], [[Displacement vs Position Vectors]].
-- Matrix ideas: [[eigen]], [[compound angle formula]].
+- Matrix ideas: [[Matrix Overview]] (order and the inner-dimension rule, $A(BC) = (AB)C$, $AB \neq BA$, inversion), [[eigen]], [[compound angle formula]].
 - [[CAD Geometry]], [[Linear Algebra]]

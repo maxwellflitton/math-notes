@@ -13,7 +13,7 @@ Each area has a Map-of-Content note that links to every topic in it:
 
 - [[Foundations]] — sets, exponent and log algebra
 - [[Trigonometry]] — identities, compound angle formulae
-- [[Linear Algebra]] — Euclidean space, vectors, lines
+- [[Linear Algebra]] — Euclidean space, vectors, lines, matrices
 - [[Calculus]] — differentiation and integration
 - [[Differential Equations]] — first and second order ODEs
 - [[CAD Geometry]] — Bézier curves, B-splines, NURBS

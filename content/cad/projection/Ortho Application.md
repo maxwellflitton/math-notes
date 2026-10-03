@@ -188,5 +188,6 @@ That parallel family of lines is the orthographic signature, and the reason orth
 ## Related
 
 - [[Ortho derivation]] — where every matrix on this page comes from.
+- [[Matrix Overview]] — the rules being used: composing transformations into one product, why the order of $P$ and $V$ cannot be swapped, and inversion for §7.
 - [[Scalar Product]], [[Vector Product]] — the dot and cross products used throughout.
 - [[CAD Geometry]], [[Linear Algebra]]

@@ -1,0 +1,1 @@
+In web GPU we have bindings and bind groups. The 

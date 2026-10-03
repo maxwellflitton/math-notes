@@ -27,7 +27,7 @@ The curves and surfaces this vault is aimed at. Part of [[Home]].
 ## Open
 - [ ] Parametric curves and surfaces in general.
 - [ ] Continuity and smoothness ($C^n$ vs $G^n$) at segment joins.
-- [ ] Transformations (translate/rotate/scale as matrices) — the rotation matrix already appears in [[compound angle formula]].
+- [ ] Transformations (translate/rotate/scale as matrices) — rotation, dilation and composing them are in [[Matrix Overview]]; the rotation matrix also appears in [[compound angle formula]]. Translation still needs homogeneous coordinates, as in [[Ortho derivation]].
 - [ ] Surfaces as tensor products of two curves.
 
 ## Related

@@ -92,12 +92,14 @@ This is the same structural move in both cases above: find the directions the op
 
 ## Connections
 - Belongs with [[Linear Algebra]] — a matrix is the linear operator, and the $\mathbf{v}$ it scales is a vector in the sense of [[Basic Operations]], living in [[Euclidean space]].
+- The mechanics of that operator — multiplication, composition, inversion — are in [[Matrix Overview]]. Its dilation $D(k, \lambda)$ is already an eigen-decomposition written out ($\hat{\imath}, \hat{\jmath}$ scaled by $k$ and $\lambda$), while its rotation $R(\alpha)$ is the case with no real eigenvector, which is why the two do not commute.
 - Only the *direction* of an eigenvector is fixed; any scalar multiple is still one, which is why they are usually normalised — see [[Unit vectors]].
 - Case 2 is the whole reason $y = e^{\lambda x}$ is the trial solution in [[linear homogenious equations]]: the auxiliary equation $a\lambda^2 + b\lambda + c = 0$ *is* the eigenvalue equation, introduced in [[Second Order differential Equations]].
 - Complex eigenvalues are the oscillating case — the real part is growth or decay and the imaginary part the rhythm: [[Complex conjugate roots]], read physically in [[dampened harmonic oscillator]].
 - $\frac{d}{dx}e^{kx} = ke^{kx}$, the property that makes $e^{kx}$ an eigenfunction, is the one in [[exp-algebria-rules]]; differentiating it is [[chain-rule|the chain rule]].
 - Superposition — splitting a problem into independent pieces and gluing them back — is the same move that adds a complementary function to a particular integral in [[linear Inhomogernious equations]].
 - Splitting a vector into a part along a direction and a part perpendicular to it is projection — [[Scalar Product]]; an orthonormal eigenbasis is the case where those coordinates cost one dot product each.
+- $\det(A - \lambda I) = 0$ asks which $\lambda$ makes the matrix collapse space, so the characteristic polynomial is a determinant — [[Determinants and inverses for matrices]].
 - Part of [[Home]].
 
 ## Open

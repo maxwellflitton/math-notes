@@ -370,8 +370,9 @@ fn none_of(u: u8, n: u8) -> bool { u & n == 0 }
 - $\bigvee$ is to OR what $\sum$ is to addition, and the empty OR being $0$ (the nurse with no grades) is the same convention as the empty sum in [[basic recursion for sum loop]]. The fixed point $m_{k+1}(r)$ is a recurrence, and the single index-order sweep is what lets it be computed in one pass.
 - Atoms $a(r) = 2^{\iota(r)}$ are distinct powers of two, so their binary expansions share no bits — which is why OR and $+$ agree on atoms and only diverge once masks overlap. Index laws: [[exp-algebria-rules]].
 - A bitset is a vector of 0s and 1s, and $U \land Q$ followed by a popcount is the dot product over $\{0, 1\}$. The none-of check $U \land N = 0$ is literally orthogonality — [[Scalar Product]].
-- $A$ is a Boolean matrix, and $A^* = I \lor A \lor A^2 \lor \cdots$ is ordinary matrix powers with OR in place of $+$ and AND in place of $\times$; lower-triangular is what makes a single sweep enough. See [[Linear Algebra]].
+- $A$ is a Boolean matrix, and $A^* = I \lor A \lor A^2 \lor \cdots$ is ordinary matrix powers with OR in place of $+$ and AND in place of $\times$; lower-triangular is what makes a single sweep enough. See [[Matrix Overview]] for the multiplication rule being reused, and [[Linear Algebra]].
 - Pay once so the hot path is arithmetic on an integer: the closure here runs at startup exactly as the closed form in [[Cylinder]] replaces a loop, so the per-request check never walks the tree.
+- The sweep is amortised in the sense of [[Monotonic Stack]]: each role is expanded once, in an order that guarantees its parents are already done, so a nested loop over the hierarchy still costs one pass.
 - The same operators read the other way round. In [[Bit Encoding]] the fields are disjoint, so $\lor$ concatenates and overlap is the bug; here masks are meant to overlap, and $\lor$ is union. Both pack structure into one integer so the hot path is arithmetic.
 - Atoms $a(r) = 2^{\iota(r)}$ are single columns of place value, and `1 << \iota(r)` is the shift — [[Binary Numbers]].
 - Part of [[Home]].

@@ -159,5 +159,7 @@ That is the reading to carry into the next section on linear transformations. Th
 - The coplanar test $(\vec{a} \times \vec{b}) \cdot \vec{c} = 0$ is the three-vector version of the orthogonality test of [[Scalar Product]] and the parallel test of [[Vector Product]] — all three are the same statement that a spanned shape has collapsed.
 - Stripping the lean off $\vec{c}$ is projection onto $\widehat{\vec{a} \times \vec{b}}$, the projection $\hat{u}\cdot\vec{a}$ of [[Scalar Product]] applied to a normal instead of an edge, with heights and volumes in [[Euclidean space]] where areas and lengths were before.
 - $\det = 0$ meaning "space squashed flat, not invertible" is the same degeneracy $\det(A - \lambda I) = 0$ exploits to find eigenvalues — the still-open characteristic polynomial of [[eigen]].
+- The transformations whose volume scaling this measures are the subject of [[Matrix Overview]]: the $2 \times 2$ determinant $ad - bc$ reappears there as the denominator of the inverse, which is why $\det = 0$ and "no inverse" are one statement.
 - A renderer uses the sign rather than the size: the triple product of three edge vectors says which side of a face a point falls on, the orientation test behind winding order and inside/outside checks on the index triples of [[Cylinder]] and [[Sphere]] — [[CAD Geometry]].
+- The matrix reading of this note, with the volume scaling factor turned into an invertibility test and an explicit inverse: [[Determinants and inverses for matrices]].
 - Part of [[Home]].
