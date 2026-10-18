@@ -61,5 +61,7 @@ For this introduction the professor states that there isn't an efficient solutio
 - A small algorithm where correctness is the whole point — one wrong operator is a privilege escalation: [[Bitset Auth]].
 - Place value, and the two conversions between decimal and binary, each provably terminating and unique: [[Binary Numbers]].
 - Well specified in the strongest sense — encode and decode are inverse functions, and the test asserts the round trip: [[Bit Encoding]].
+- The traversal the other graph notes are built on, with its three hooks and the FIFO-versus-LIFO switch that turns it into DFS: [[Breadth First Search]].
+- A graph algorithm whose output is an *order*, where the specification is "every parent before its child" and the failure case is a cycle rather than a wrong answer: [[kahns algorithm]].
 - Part of [[Home]].
 

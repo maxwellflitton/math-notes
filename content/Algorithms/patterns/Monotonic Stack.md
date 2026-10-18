@@ -138,6 +138,8 @@ The nested `while` looks quadratic but isn't. Whenever an inner loop *consumes* 
 - Same accounting, different problem: [[Bitset Auth]] expands each role exactly once in index order, so the closure costs one sweep and the request path is a single AND. Both notes pay a bounded price up front per item instead of re-deriving it in the inner loop — as [[Cylinder]] replaces a loop with a closed form per index.
 - $-1$ as "there is no next greater element" is the identity-as-safe-default convention again: the all-zero id in [[Bit Encoding]], the empty OR in [[Bitset Auth]]. The stack itself holds indices rather than values for the same reason [[Bit Encoding]] stores a slot number — the index is the handle, and `St.top − i` is arithmetic on handles.
 - The convex hull variants are where this meets the CAD notes. Andrew's monotone chain keeps a stack of hull vertices and pops while the last turn is not a left turn, and the sign of that turn is the $2 \times 2$ determinant of [[Determinant (cofactor) form of the cross product]] — the pop condition is a cross product rather than a comparison. The hull it builds is the one the control points of [[Bezier Curves]] are guaranteed to contain their curve inside.
+- The container *is* the algorithm, as here: [[Breadth First Search]] with a FIFO queue explores in rings, and the same code with a LIFO stack is depth first search.
+- The same counting bound on a graph instead of an array: [[kahns algorithm]] enqueues each node at most once and decrements each edge exactly once, giving $O(V + E)$ from the pushes rather than from the nesting.
 - Part of [[Home]].
 
 ## Open

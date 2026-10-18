@@ -375,5 +375,7 @@ fn none_of(u: u8, n: u8) -> bool { u & n == 0 }
 - The sweep is amortised in the sense of [[Monotonic Stack]]: each role is expanded once, in an order that guarantees its parents are already done, so a nested loop over the hierarchy still costs one pass.
 - The same operators read the other way round. In [[Bit Encoding]] the fields are disjoint, so $\lor$ concatenates and overlap is the bug; here masks are meant to overlap, and $\lor$ is union. Both pack structure into one integer so the hot path is arithmetic.
 - Atoms $a(r) = 2^{\iota(r)}$ are single columns of place value, and `1 << \iota(r)` is the shift — [[Binary Numbers]].
+- The reachability closure $A^*$ is what you get by running [[Breadth First Search]] from every role, with $U$ as the visited mask: "not yet visited" is $U \land a(r) = 0$ and marking is one OR.
+- The index-order sweep of step 3 works because $A$ is strictly lower triangular, i.e. the role ids already happen to be a topological order of the forest. Computing such an order when the ids do not supply one is [[kahns algorithm]], which has the same acyclicity precondition.
 - Part of [[Home]].
 
