@@ -103,4 +103,5 @@ This is an **outer product**: a column times a row gives a full matrix, where ev
 - The matrices act on the component-form vectors of [[Basic Operations]], transforming the space of [[Euclidean space]].
 - Collapsing several matrices into one is what a camera does: [[Ortho derivation]] builds the factors and [[Ortho Application]] multiplies them into a single $PV$.
 - Replace $\times$ with AND and $+$ with OR and the same $c_{ij}$ formula computes reachability in a permission graph — [[Bitset Auth]].
+- Reading the product as a system instead of a transformation: $A\mathbf{x} = \mathbf{b}$ is one equation per row, solved by row operations in [[Gaussian elimination]].
 - Part of [[Home]].

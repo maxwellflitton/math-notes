@@ -24,6 +24,7 @@ Space, distance and the objects living in it. Part of [[Home]].
 - [[Matrix algebra]] — matrices as linear systems, $A = [a_{ij}]$ notation, the inner-dimension rule, $c_{ij} = \sum_k a_{ik} b_{kj}$ worked entry by entry, and the outer product.
 - [[Matrix Overview]] — order and the inner-dimension rule, composing transformations, non-commutativity, and inversion down to the $2 \times 2$ formula.
 - [[Determinants and inverses for matrices]] — the determinant as signed area and volume, cofactor expansion, and the adjugate inverse worked at $3 \times 3$.
+- [[Gaussian elimination]] — row operations, the augmented matrix, the staircase and back substitution, and what a zero determinant does to the solution set.
 
 ## Rotations
 - [[quaternions]] — a scalar plus a vector, the Hamilton product as dot and cross bundled together, conjugate and inverse, and the half-angle sandwich that rotates a vector.
@@ -45,7 +46,7 @@ Space, distance and the objects living in it. Part of [[Home]].
 - Matrices over Booleans, with OR as addition and AND as multiplication: the transitive closure $A^* = I \lor A \lor A^2 \lor \cdots$ in [[Bitset Auth]].
 
 ## Open
-- [x] Determinants and inverses beyond $2 \times 2$ — cofactors and the adjugate are in [[Determinants and inverses for matrices]]; Gaussian elimination is still open there.
+- [x] Determinants and inverses beyond $2 \times 2$ — cofactors and the adjugate are in [[Determinants and inverses for matrices]], and the practical $O(n^3)$ route is [[Gaussian elimination]].
 - [ ] Shear and reflection matrices alongside the rotation and dilation of [[Matrix Overview]].
 - [ ] Diagonalisation and the characteristic polynomial, following on from [[eigen]].
 

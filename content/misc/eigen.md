@@ -101,6 +101,7 @@ This is the same structural move in both cases above: find the directions the op
 - Splitting a vector into a part along a direction and a part perpendicular to it is projection — [[Scalar Product]]; an orthonormal eigenbasis is the case where those coordinates cost one dot product each.
 - $\det(A - \lambda I) = 0$ asks which $\lambda$ makes the matrix collapse space, so the characteristic polynomial is a determinant — [[Determinants and inverses for matrices]].
 - A 3D rotation has exactly one real eigendirection, its axis, with eigenvalue $1$ — which is the $\hat n$ stored directly in a unit quaternion: [[quaternions]].
+- Finding an eigenvector once $\lambda$ is known means solving $(A - \lambda I)\mathbf{v} = \mathbf{0}$, which in practice is row reduction with a deliberately singular matrix — [[Gaussian elimination]].
 - Part of [[Home]].
 
 ## Open

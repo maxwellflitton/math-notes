@@ -33,6 +33,7 @@ The two point form is generally used when the geometry gives you *two locations*
 Note that this form still breaks down for a vertical line: if $x_{1} = x_{2}$ the denominator $x_{2} - x_{1}$ becomes zero and the slope is undefined. In that case the line is simply $x = x_{1}$, which is why the general form $ax + by = c$ is preferred when you need to cover every possible line without exceptions.
 
 ## Connections
+- Two lines that never meet are a singular system: $x + y = 4$ with $2x + 2y = 5$ has $\det = 0$, so elimination produces a contradiction rather than a point — [[Gaussian elimination]].
 - Part of [[Linear Algebra]]; lives in [[Euclidean space]].
 - The set-builder definition at the top is the worked example in [[sets]].
 - The slope $m = \frac{y_2 - y_1}{x_2 - x_1}$ is exactly the difference quotient whose limit defines the derivative — see [[lim-zero-example]]. A line is the curve whose slope never changes.

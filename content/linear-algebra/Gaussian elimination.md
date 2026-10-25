@@ -11,21 +11,29 @@ date: 2026-10-25
 
 We should already be familiar with the linear equation as the following generalisation:
 
-$$y = mx + c$$
+$$
+y = mx + c
+$$
 
 An equation involving $n$ variables $x_1, x_2, \dots, x_n$ is said to be linear in each of these variables if it can be written in the following form:
 
-$$a_1 x_1 + a_2 x_2 + a_3 x_3 + \dots + a_n x_n = d$$
+$$
+a_1 x_1 + a_2 x_2 + a_3 x_3 + \dots + a_n x_n = d
+$$
 
 We can show that the $y = mx + c$ equation is linear by rewriting it as $y - mx = c$, where $n = 2$ variables and
 
-$$a_1 = 1, \quad x_1 = y, \quad a_2 = -m, \quad x_2 = x, \quad d = c$$
+$$
+a_1 = 1, \quad x_1 = y, \quad a_2 = -m, \quad x_2 = x, \quad d = c
+$$
 
 ## A simple system
 
 Now let's look at the following simple system of linear equations:
 
-$$\underbrace{3x + 2y = 8}_{\alpha} \quad \text{and} \quad \underbrace{x - y = 1}_{\beta}$$
+$$
+\underbrace{3x + 2y = 8}_{\alpha} \quad \text{and} \quad \underbrace{x - y = 1}_{\beta}
+$$
 
 We could eliminate $y$ by $\alpha + 2\beta$, because both equations are linear: $-2y + 2y$ cancels out. We would then have $5x = 10$ left as an equation. Once we have $x$ we can solve for $y$, which in this example is one.
 
@@ -52,7 +60,9 @@ $$
 
 We can then solve for $x_3$ with the following:
 
-$$2x_3 = 4 \qquad (E_{3b}) = (E_{3a}) - 3(E_{2a})$$
+$$
+2x_3 = 4 \qquad (E_{3b}) = (E_{3a}) - 3(E_{2a})
+$$
 
 You may have noticed that we have essentially created a "staircase" of equations. This is where $E_{3b}$ has just $x_3$, $E_{2a}$ has $x_2$ and $x_3$, so we have a dominoes effect where we can solve all $x_n$.
 
@@ -84,7 +94,9 @@ $$
 
 The matrix of the coefficients is the coefficient matrix, denoted as $A$. The unknown vector of $x$ variables can be denoted as $\mathbf{x}$, and the constant vector can be denoted as $\mathbf{b}$, giving the following equation:
 
-$$A\mathbf{x} = \mathbf{b}$$
+$$
+A\mathbf{x} = \mathbf{b}
+$$
 
 Here we can represent the above equation as an augmented matrix below:
 
@@ -237,26 +249,51 @@ We can see in $R_1$ straight away that $x_3 = 2$, and $R_{2a}$ instantly gives $
 
 There is a powerful benefit to performing Gaussian elimination in matrix form, and this is the inverse matrix:
 
-$$\text{if } \det A \neq 0 \;\Rightarrow\; A A^{-1} = I$$
+$$
+\text{if } \det A \neq 0 \;\Rightarrow\; A A^{-1} = I
+$$
 
 So in the non-singular case, the unique solution of a system of equations $A\mathbf{x} = \mathbf{b}$ is given by:
 
-$$\mathbf{x} = A^{-1}\mathbf{b}$$
+$$
+\mathbf{x} = A^{-1}\mathbf{b}
+$$
 
 However, there is a limitation to this. As the matrix grows, finding the inverse requires more steps. There is the exception of sparse matrices, but the inverse should not be thoughtlessly applied.
 
 > [!note] Correction on cost
-> The handwritten version says the inverse grows "to the $n!$ multiplications". That's the cost of computing a determinant (and hence the inverse) by cofactor expansion. In practice nobody does it that way: inverting via Gaussian elimination is $O(n^3)$, and solving $A\mathbf{x} = \mathbf{b}$ directly by elimination plus back substitution is cheaper still (roughly a third of the work) and numerically better behaved. So the practical rule is the one you landed on — don't form $A^{-1}$ just to solve a system; eliminate instead. The last sentence originally read "Gaussian elimination should not be thoughtlessly applied" but from context it's the *inverse* that's the expensive thing, so I've reworded it.
+> The handwritten version says the inverse grows "to the $n!$ multiplications". That's the cost of computing a determinant (and hence the inverse) by cofactor expansion. In practice nobody does it that way: inverting via Gaussian elimination is $O(n^3)$, and solving $A\mathbf{x} = \mathbf{b}$ directly by elimination plus back substitution is cheaper still (roughly a third of the work) and numerically better behaved. So the practical rule is the one you landed on — don't form $A^{-1}$ just to solve a system; eliminate instead. The last sentence originally read "Gaussian elimination should not be thoughtlessly applied" but from context it's the _inverse_ that's the expensive thing, so I've reworded it.
 
 ## When the determinant is zero
 
 Finally we can explore when the determinant is zero with the following equations:
 
-$$x + y = 4 \quad \text{and} \quad 2x + 2y = 5 \;\Rightarrow\; \begin{bmatrix} 1 & 1 \\ 2 & 2 \end{bmatrix} \;\Rightarrow\; \det = 2 - 2 = 0$$
+$$
+x + y = 4 \quad \text{and} \quad 2x + 2y = 5 \;\Rightarrow\; \begin{bmatrix} 1 & 1 \\ 2 & 2 \end{bmatrix} \;\Rightarrow\; \det = 2 - 2 = 0
+$$
 
 This means that the system is said to be **singular**, as there is no unique solution. It may have no solution or infinitely many solutions.
 
 > [!note]
-> This particular example has *no* solution: the second equation says $x + y = 2.5$, which contradicts the first. If it had been $2x + 2y = 8$ the same determinant would be zero but there would be infinitely many solutions — the two lines coincide.
+> This particular example has _no_ solution: the second equation says $x + y = 2.5$, which contradicts the first. If it had been $2x + 2y = 8$ the same determinant would be zero but there would be infinitely many solutions — the two lines coincide.
 
 ---
+
+## Connections
+
+- Part of [[Linear Algebra]], and the practical half of [[Determinants and inverses for matrices]]. That note computes $\det$ and $A^{-1}$ by cofactors, which costs $n!$ terms; elimination gets the same answers in $O(n^3)$ by making the matrix triangular, where the determinant is just the product of the pivots (times $-1$ per row swap). The correction callout above is exactly that gap between the textbook formula and the practical algorithm.
+- $A\mathbf{x} = \mathbf{b}$ is the matrix product of [[Matrix algebra]] read as a system: row $i$ of $A$ dotted with $\mathbf{x}$ is equation $i$, which is why a row operation is an operation on one whole equation. The three allowed operations are themselves matrices — each is an invertible elementary matrix, so elimination is a product $E_k \cdots E_1 A = U$, i.e. the composition of transformations in [[Matrix Overview]] with $\det E \neq 0$ at every step, which is why the solution set never changes.
+- $\mathbf{x} = A^{-1}\mathbf{b}$ needs $\det A \neq 0$, the invertibility condition of [[Determinants and inverses for matrices]]. Geometrically $\det = 0$ means the rows span no area — the degenerate $2 \times 2$ determinant of [[Determinant (cofactor) form of the cross product]], and at $3 \times 3$ the coplanar test of [[Volumes and the scalar triple product]]. Elimination detects it concretely: a row of zeros on the left is a collapsed span.
+- The singular example _is_ two lines. $x + y = 4$ and $2x + 2y = 5$ are parallel in the sense of [[Lines]] and [[Euclidean space]] — same direction vector, different intercept, so they never meet and there is no solution; change the constant to $8$ and they coincide, giving infinitely many. The three outcomes are the three possible solution sets of [[sets]]: empty, a single point, or an infinite family.
+- A zero pivot forcing a row swap is the same degeneracy that makes $\det(A - \lambda I) = 0$ interesting: solving that system by elimination is how an eigenvector is actually found, with the free variable after elimination being the eigenvector's scale — [[eigen]].
+- Cost, in the sense of [[introduction to algorithms]]: elimination is correct _and_ affordable, where cofactor expansion is correct and not. The count is a sum of squares, $\sum_{k=1}^{n} k^2 \approx n^3/3$ operations, the same kind of closed form for a nested loop as $1 + 2 + \cdots + n$ in [[basic recursion for sum loop]] — one dimension up because elimination loops over rows, columns and the right-hand side.
+- "Do not form $A^{-1}$ just to solve a system" has an exception worth naming: in [[Ortho Application#7. Running it backwards]] the inverse of $PV$ is built once and reused for every picked pixel, so the inversion is amortised over many right-hand sides. The rule is about solving once, not about never inverting.
+- Part of [[Home]].
+
+## Open
+
+- [ ] LU decomposition: storing the multipliers instead of discarding them, so repeated $\mathbf{b}$ values reuse one elimination.
+- [ ] Partial pivoting for numerical stability — swapping for the _largest_ pivot rather than merely a non-zero one, and what catastrophic cancellation looks like.
+- [ ] The determinant read off the triangular form as a product of pivots, with the sign bookkeeping for row swaps.
+- [ ] Reduced row echelon form and the Gauss–Jordan route to $A^{-1}$ by eliminating $[A \mid I]$ into $[I \mid A^{-1}]$.
+- [ ] Rank, free variables, and writing the infinite solution family in parametric form when $\det A = 0$.

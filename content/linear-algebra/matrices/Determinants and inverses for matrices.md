@@ -194,10 +194,11 @@ The determinant respects matrix multiplication, $\det(AB) = \det(A)\det(B)$: doi
 - Cofactor expansion is recursion with the $2 \times 2$ as its base case, in the sense of [[basic recursion for sum loop]]. It is also a worked example of a correct but expensive algorithm: $n!$ terms for an $n \times n$ matrix against $O(n^3)$ for elimination, the same correctness-versus-cost split as exhaustive search in [[introduction to algorithms]].
 - The transformations being inverted act on the vectors of [[Basic Operations]] in [[Euclidean space]], and composing them entry by entry is [[Matrix algebra]].
 - $\det(AB) = \det A \det B$ is why a chain of model, view and projection matrices has one overall volume scaling — the camera of [[Ortho derivation]], and the control-point transforms of [[CAD Geometry]].
+- The $n!$ cost of cofactor expansion is why nothing computes a determinant this way past $3 \times 3$: triangularising with row operations gives the same number as a product of pivots in $O(n^3)$, and the same sweep solves $A\mathbf{x} = \mathbf{b}$ — [[Gaussian elimination]].
 - Part of [[Home]].
 
 ## Open
 
-- [ ] Gaussian elimination as the practical determinant and inverse, and why cofactors do not scale past $3 \times 3$.
+- [x] Gaussian elimination as the practical determinant and inverse — [[Gaussian elimination]]; LU, pivoting and the determinant as a product of pivots are still open there.
 - [ ] Shear and reflection matrices, and reading $\det < 0$ off them directly.
 - [ ] Diagonalisation and the characteristic polynomial, following on from [[eigen]].
