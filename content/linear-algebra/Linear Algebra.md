@@ -25,6 +25,9 @@ Space, distance and the objects living in it. Part of [[Home]].
 - [[Matrix Overview]] — order and the inner-dimension rule, composing transformations, non-commutativity, and inversion down to the $2 \times 2$ formula.
 - [[Determinants and inverses for matrices]] — the determinant as signed area and volume, cofactor expansion, and the adjugate inverse worked at $3 \times 3$.
 
+## Rotations
+- [[quaternions]] — a scalar plus a vector, the Hamilton product as dot and cross bundled together, conjugate and inverse, and the half-angle sandwich that rotates a vector.
+
 ## Operators
 - [[eigen]] — the vectors and functions a linear operator only scales, and what eigen-decomposition buys you.
 
@@ -38,6 +41,7 @@ Space, distance and the objects living in it. Part of [[Home]].
 - The determinant is where the vector notes and the matrix notes meet: the $ad - bc$ of [[Determinant (cofactor) form of the cross product]] and the triple product of [[Volumes and the scalar triple product]] are the same number that [[Determinants and inverses for matrices]] divides by to invert a matrix.
 - Rotations compose: $R(\alpha)R(\beta) = R(\alpha + \beta)$ in [[Matrix Overview]] is the [[compound angle formula|compound angle formulae]] read as one matrix product.
 - The camera of [[Ortho derivation]] and [[Ortho Application]] is [[Matrix Overview]] applied: successive transformations multiplied into one $PV$, order-sensitive, then inverted for picking.
+- Three ways to rotate: the $2 \times 2$ matrix $R(\alpha)$ of [[Matrix Overview]], the complex number $e^{i\theta}$ behind [[compound angle formula|the compound angle formulae]], and the unit quaternion of [[quaternions]] — the same group written in two, two and four numbers, with the axis appearing as the eigenvector of [[eigen]] once you reach three dimensions.
 - Matrices over Booleans, with OR as addition and AND as multiplication: the transitive closure $A^* = I \lor A \lor A^2 \lor \cdots$ in [[Bitset Auth]].
 
 ## Open

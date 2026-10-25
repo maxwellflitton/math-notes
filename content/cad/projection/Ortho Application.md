@@ -190,4 +190,5 @@ That parallel family of lines is the orthographic signature, and the reason orth
 - [[Ortho derivation]] — where every matrix on this page comes from.
 - [[Matrix Overview]] — the rules being used: composing transformations into one product, why the order of $P$ and $V$ cannot be swapped, and inversion for §7.
 - [[Scalar Product]], [[Vector Product]] — the dot and cross products used throughout.
+- [[quaternions]] — the orientation half of $V$ can be carried as a unit quaternion and turned into a matrix only at upload time, which keeps it from drifting into a shear.
 - [[CAD Geometry]], [[Linear Algebra]]

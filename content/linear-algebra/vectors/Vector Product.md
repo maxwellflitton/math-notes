@@ -120,5 +120,6 @@ They are complements: one detects agreement, the other detects independence.
 - The faces of [[Cylinder]] are index triples written in a fixed order; that order is what a renderer crosses two edge vectors to turn into an outward normal.
 - The coordinate recipe, $\vec{a}\times\vec{b} = (a_yb_z - a_zb_y,\ a_zb_x - a_xb_z,\ a_xb_y - a_yb_x)$, with the minors read as shadow areas and a worked example: [[Determinant (cofactor) form of the cross product|determinant form of the cross product]].
 - Dotting the normal against a third vector measures the height above the spanned parallelogram, turning the area into the volume of a parallelepiped — [[Volumes and the scalar triple product]].
+- Bundled with the dot product into a single multiplication, the cross term is what makes quaternion multiplication non-commutative and what carries the rotation: [[quaternions]].
 - Part of [[Home]].
 

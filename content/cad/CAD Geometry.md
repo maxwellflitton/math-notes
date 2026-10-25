@@ -10,6 +10,8 @@ The curves and surfaces this vault is aimed at. Part of [[Home]].
 ## Notes
 - [[Bezier Curves]] — control points blended by Bernstein polynomials.
 - [[B-Splines and NURBS]] — the generalisation: local control, arbitrary segment counts, rational weights.
+- [[Piecewise polynomials and rational maps]] — what the curve pieces actually are: polynomials glued on half-open intervals, and the quotient form that makes circles exact.
+- [[Curve continuity]] — $C^k$ against $G^k$ at a join, the $\lambda$ and $\mu$ conditions, and curvature $\kappa = \lVert c' \times c'' \rVert / \lVert c' \rVert^3$ as what makes reflections flow.
 
 ## Mesh algorithms
 - [[Cylinder]] — building a triangle mesh for a cylinder: the vertex and face arrays, edges as derived data ($E = \partial F$), and the closed form for both.
@@ -26,7 +28,7 @@ The curves and surfaces this vault is aimed at. Part of [[Home]].
 
 ## Open
 - [ ] Parametric curves and surfaces in general.
-- [ ] Continuity and smoothness ($C^n$ vs $G^n$) at segment joins.
+- [x] Continuity and smoothness ($C^n$ vs $G^n$) at segment joins — written up in [[Curve continuity]]; surface-to-surface continuity across patch boundaries is still open there.
 - [ ] Transformations (translate/rotate/scale as matrices) — rotation, dilation and composing them are in [[Matrix Overview]]; the rotation matrix also appears in [[compound angle formula]]. Translation still needs homogeneous coordinates, as in [[Ortho derivation]].
 - [ ] Surfaces as tensor products of two curves.
 
