@@ -5,6 +5,7 @@ tags:
   - hashing
   - data-structures
 source: Skiena, The Algorithm Design Manual, §3.7
+related: "[[introduction to algorithms]]"
 written: 2026-10-31
 ---
 
@@ -75,6 +76,24 @@ Hashing has other applications. The idea of a hash is to represent a large objec
 - **Change detection.** Cryptographic hashing is also used to detect changes in network packets or files (integrity checks: if the hash differs, something changed).
 - **Canonicalisation / fingerprinting.** We can also use hashing for canonicalisation, or compaction such as fingerprinting: a short fixed-size value that stands in for the big object.
 
-## Related
+## Connections
 
-- [[Hash map collision handling]] — open addressing vs chaining, load factor, hashbrown
+- Sits with [[introduction to algorithms]], and moves the goalposts of that note's correctness framing. A hash table is correct no matter how bad $H$ is: lookups compare keys for equality, so a terrible hash costs *time*, never a wrong answer. What the hash function buys is distribution, and the guarantee it gives is expected rather than worst case — $O(1)$ on average, $O(n)$ if everything lands in one bucket. That is a different kind of claim from "every input gives the right output", and adversarial input (HashDoS) is the case where the average stops being the thing to reason about.
+- $H(S) = \sum_{i} \alpha^{|S| - (i+1)}\,\mathrm{char}(S_i)$ *is* positional notation, with the alphabet size as the base: the string is read as a number in base $\alpha$ exactly as [[Binary Numbers]] reads a bit pattern in base 2. The implementation is the same recurrence, $v \leftarrow \alpha v + \mathrm{char}(S_i)$ against that note's $v \leftarrow 2v + b$ — Horner's rule, a recurrence with an accumulator in the sense of [[basic recursion for sum loop]]. Index laws for $\alpha^k$: [[exp-algebria-rules]].
+- The power-of-two trick is the $2^k - 1$ low mask: $h \bmod 2^k = h \,\&\, (2^k - 1)$, which is place value from [[Binary Numbers]] and `low_mask` in [[Bit Shifting operations]]. The same identity is why a [[Ring Buffer]] sized to a power of two wraps with `& (n - 1)` instead of `%`, and the reason both data structures prefer those capacities is this one line of arithmetic.
+- The exact opposite of [[Bit Encoding]], and the pair is worth holding together. There the map is injective — `pack_id` and its decode are inverse functions and the test asserts the round trip, so a collision would be a bug. Here the map is many-to-one *by construction*: the point is to compact an unbounded key into a fixed-width integer, so collisions are a structural certainty to be handled rather than a defect to be fixed. Both squeeze a large object into one number; only one of them can be undone.
+- Chaining is a [[Linked Lists|linked list]] per bucket, and the memory objection in this note is that note's trade-off restated: a pointer per bucket and a node per element buys you unbounded occupancy and costs you cache locality. Open addressing is the contiguous answer, which is why it probes — and the arena-of-indices alternative to `Box` there is the same instinct as keeping everything in one array here.
+- A hash table is set membership made cheap, in the sense of [[sets]]: duplicate detection is testing $x \in S$, and the plagiarism case is an intersection of two sets of window hashes. [[Bitset Auth]] is the other representation of the same operation — one bit per element, exact and collision-free, but it needs a small dense universe of keys. Hashing is what you reach for when the universe is huge and sparse, and the price of that is approximation in the bucket index.
+- Where `visited` comes from in [[Breadth First Search]]. For a graph with dense integer ids that set is an array or a bitmask; for the implicit graphs that note describes — mesh triangles keyed by an index triple — there is no natural slot, so membership is a hash set and the traversal's $O(V + E)$ rests on the expected $O(1)$ above.
+- Rehashing is amortised doubling, the counting argument of [[Monotonic Stack]] in its other classic form: each grow moves every element once, but the sizes form a geometric series $n + \frac{n}{2} + \frac{n}{4} + \cdots < 2n$, so $n$ inserts cost $O(n)$ total even though one of them is $O(n)$ on its own. The geometric sum itself is the $\sum_{k} 2^k = 2^{n} - 1$ of [[Binary Numbers]].
+- At system scale this becomes a partitioning decision: sharding by hash of key spreads load evenly but destroys range scans, and every hash index is derived data rebuildable from the system of record — [[Trade-offs in Data Systems Architecture]].
+- Part of [[Home]].
+
+## Open
+
+- [ ] [[Hash map collision handling]] — open addressing against chaining written out: load factor, linear versus quadratic probing, Robin Hood, and what hashbrown/SwissTable does with its SIMD metadata bytes.
+- [ ] The expected-cost analysis with load factor $\alpha$: chains as $1 + \alpha$ and probes as $\frac{1}{1 - \alpha}$, plus the amortised doubling argument written with constants as in [[Monotonic Stack]].
+- [ ] Settle the leading $\alpha^{|S|}$ term against Skiena (see the callout above) and write the Horner form that an implementation would actually use.
+- [ ] Rolling hash (Rabin–Karp) for the overlapping-window case — the whole point is getting the next window's hash in $O(1)$ from the previous one, which the formula above does not give as written.
+- [ ] Cryptographic against non-cryptographic hashing: collision resistance, and why Rust's default hasher is SipHash rather than something faster.
+- [ ] Rust implementation of both collision strategies over the same `Hasher` trait, with a distribution test on real strings.
