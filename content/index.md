@@ -18,5 +18,6 @@ Each area has a Map-of-Content note that links to every topic in it:
 - [[Differential Equations]] — first and second order ODEs
 - [[CAD Geometry]] — Bézier curves, B-splines, NURBS
 - [[introduction to algorithms]] — recursion and complexity
+- [[Trade-offs in Data Systems Architecture|Data Systems]] — operational vs analytical, cloud, distribution (DDIA)
 
 Use the Explorer on the left, or search, to find a topic.

@@ -209,4 +209,5 @@ With that, the recurrence works right down to $n=1$: it gives $1 = 1 + 0$, and n
 - The same move on a different loop: [[Cylinder]] derives a closed form for each buffer slot, so the mesh is computed per index instead of by iterating — and proves its edge set redundant by double inclusion rather than by induction.
 - The geometric twin of $1 + 2 + \cdots + n$: $\sum_{k=0}^{n-1} 2^k = 2^n - 1$, which is why a mask of $k$ ones is $2^k - 1$ and why an $n$-bit type stops at $2^n - 1$ — [[Binary Numbers]].
 - The iterative-versus-recursive pair in graph form: the DFS post-order topological sort is a recurrence with a base case, while [[kahns algorithm]] does the same job with a queue and an in-degree count.
+- Walking a chain is the same recurrence on a data structure: $\text{len}(node) = 1 + \text{len}(node.next)$ with the empty list as base case, written as a loop in [[Linked Lists]] because Rust makes no tail-call guarantee.
 - The empty-sum convention has an OR twin: an empty $\bigvee$ is $0$, which is exactly why a user with no grades gets an all-zero mask and can never pass a check — [[Bitset Auth]].

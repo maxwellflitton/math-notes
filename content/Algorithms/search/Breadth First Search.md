@@ -98,6 +98,7 @@ DFS(start):
 - Marking on push, not on pop, is the same "reserve the state that says done" instinct as the identity-as-default conventions in [[Bit Encoding]] and [[Bitset Auth]]; mark on pop and a node already sitting in the queue gets pushed again by its next neighbour.
 - BFS distance counts hops, which is not the straight-line distance of [[Euclidean space]] — two mesh vertices one edge apart can be far apart in space. Weighting the edges by that Euclidean length is what forces the FIFO queue to become a priority queue, i.e. Dijkstra.
 - The implicit-graph case is the mesh one: the triangles of [[Cylinder]] and [[Sphere]] are index triples, and "the triangles sharing an edge with this one" is a neighbour function computed on demand rather than an adjacency list held in memory. [[Stripping Triangles]] — a strip as a walk through that dual graph — is not written yet.
+- A graph where every node has exactly one neighbour is a [[Linked Lists|linked list]], and the `parent` chain this note walks back from the target is one — hook two degenerates to "follow `next`".
 - The recursive form of DFS, call stack instead of explicit stack, is a recurrence with a base case: [[basic recursion for sum loop]].
 - Part of [[Home]].
 
