@@ -193,4 +193,5 @@ Everything above is unsigned, which is what the GPU ids of [[Bit Encoding]] use.
 - Reading a number as a vector of digits against a vector of column values, $v = \sum b_k 2^k$, is a dot product of the bits with the place values — [[Scalar Product]].
 - Positional notation is a choice of base the way a coordinate system is a choice of basis; base 2 and base 16 describe the same integer in different columns, as [[Basic Operations]] writes the same vector in different components.
 - Correctness by well-specified procedure, in the sense of [[introduction to algorithms]]: both conversions above terminate and both are provably unique, which is what lets code round-trip through them.
+- Place value in a base that is not 2: the string hash of [[Hashing]] reads a word as a number in base $\alpha$, with the same $v \leftarrow \alpha v + c$ recurrence as the decimal-to-binary sweep here. Its power-of-two bucket trick, $h \bmod 2^k = h \,\&\, (2^k - 1)$, is the mask identity above.
 - Part of [[Home]].

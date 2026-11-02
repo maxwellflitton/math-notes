@@ -211,3 +211,4 @@ With that, the recurrence works right down to $n=1$: it gives $1 = 1 + 0$, and n
 - The iterative-versus-recursive pair in graph form: the DFS post-order topological sort is a recurrence with a base case, while [[kahns algorithm]] does the same job with a queue and an in-degree count.
 - Walking a chain is the same recurrence on a data structure: $\text{len}(node) = 1 + \text{len}(node.next)$ with the empty list as base case, written as a loop in [[Linked Lists]] because Rust makes no tail-call guarantee.
 - The empty-sum convention has an OR twin: an empty $\bigvee$ is $0$, which is exactly why a user with no grades gets an all-zero mask and can never pass a check — [[Bitset Auth]].
+- Structural induction, the same argument over a tree rather than over $n$: [[Binary Tree Validation]], where the empty tree returning `True` is this note's empty-sum convention with AND as the operation.

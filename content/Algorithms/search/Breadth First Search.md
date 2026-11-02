@@ -100,6 +100,8 @@ DFS(start):
 - The implicit-graph case is the mesh one: the triangles of [[Cylinder]] and [[Sphere]] are index triples, and "the triangles sharing an edge with this one" is a neighbour function computed on demand rather than an adjacency list held in memory. [[Stripping Triangles]] — a strip as a walk through that dual graph — is not written yet.
 - A graph where every node has exactly one neighbour is a [[Linked Lists|linked list]], and the `parent` chain this note walks back from the target is one — hook two degenerates to "follow `next`".
 - The recursive form of DFS, call stack instead of explicit stack, is a recurrence with a base case: [[basic recursion for sum loop]].
+- What `visited` actually is when the ids are not dense integers: a hash set, so hook three's membership test is the expected $O(1)$ of [[Hashing]] rather than an array index.
+- DFS carrying state downwards instead of sideways: [[Binary Tree Validation]] hands each child a tightened range, so the invariant rides the recursion and no `visited` set is needed — a tree has no second route to a node.
 - Part of [[Home]].
 
 ## Open

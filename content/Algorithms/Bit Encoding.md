@@ -217,5 +217,6 @@ Same two operations, three fields instead of two, 24 usable bits so about 16.7 m
 - Correctness as a specified procedure, and one counterexample being enough to sink it — [[introduction to algorithms]]. The `round_trips` test is the specification written down; the release-mode `debug_assert!` gap is the counterexample it does not cover.
 - Index laws behind the shifts, $2^a 2^b = 2^{a+b}$: [[exp-algebria-rules]].
 - The id texture is derived data in the sense of [[Trade-offs in Data Systems Architecture]]: the scene is authoritative, the texture is regenerated every frame, and the only question that matters of it is "where would I rebuild this from" — which is also why reusing a slot is safe once the scene has moved on.
+- The lossy twin: [[Hashing]] also compresses a large object into one integer, but many-to-one on purpose, so collisions are expected rather than a bug and nothing can be decoded back. Injective packing is what makes the round-trip test here possible at all.
 - The same choice in the small: an arena of nodes indexed by a packed id is the alternative to `Option<Box<Node>>` pointers in [[Linked Lists]] — `Copy` handles and index arithmetic instead of pointer chasing, with a free list doing what `Box` did.
 - Part of [[Home]].

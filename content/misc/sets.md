@@ -112,5 +112,7 @@ Once you can read those two halves, any set notation — no matter how dense —
 - $\mathbb{R}$ and $\mathbb{C}$ from the symbol table: the reals are where most solutions live, and the complex numbers are forced on us by the negative discriminant in [[Complex conjugate roots]].
 - Interval notation like $\{x \in \mathbb{R} \mid 0 \le x < 1\}$ is how the parameter domain $t \in [0,1]$ of [[Bezier Curves]] is specified.
 - Sets stored as integers, one bit per element — union is OR, intersection is AND, and $\subseteq$ is tested as `x & y == x`: [[Bitset Auth]].
+- The representation for a huge sparse universe, where one bit per element is impossible: [[Hashing]] buckets the keys instead, so $x \in S$ costs an expected constant and the price is collisions.
+- Interval notation doing real work: each node of [[Binary Tree Validation]] carries the range it may take, and walking down the tree intersects that interval with a half-line at every step.
 - Counting one set against another is how a running time gets bounded: the pops of [[Monotonic Stack]] inject into its pushes, so $\sum p_i \le n$ without ever evaluating the sum.
 - The other half of the prerequisite toolkit: [[exp-algebria-rules]].

@@ -113,6 +113,8 @@ Ch2 picks up the quality attributes of a single system: how to describe performa
 - Percentiles over averages, the Ch2 topic this chapter leads into, is the amortised argument of [[Monotonic Stack]] read from the other end. There a worst-case inner loop is harmless because the *total* is bounded; a tail latency is the case where the total is fine and the individual request is not, so averaging hides exactly the users who are suffering.
 - Separation of storage from compute is the shape the GPU notes already assume: durable buffers uploaded once and bound by [[Bindings]], against disposable per-invocation work in [[Shaders]] that holds no state between frames. Shared-nothing parallelism, the same reason both scale by adding units.
 - The vault itself is an instance: markdown files in git are the system of record, and every search index, backlink table and published Quartz page is derived data that can be deleted and rebuilt from them.
+- Sharding by hash of key, the Ch7 topic, is [[Hashing]] applied to machines rather than buckets: even spread at the cost of range scans, with the same collision and rebalancing questions one level up.
+- B-trees, the Ch4 index structure, are [[Binary Tree Validation]]'s ordered-keys invariant generalised to disk pages — which is why an operational store indexes with them and keeps range scans, while an analytical one reaches for column layouts instead.
 - Part of [[Home]].
 
 ## Open

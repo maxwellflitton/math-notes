@@ -65,5 +65,7 @@ For this introduction the professor states that there isn't an efficient solutio
 - The traversal the other graph notes are built on, with its three hooks and the FIFO-versus-LIFO switch that turns it into DFS: [[Breadth First Search]].
 - A graph algorithm whose output is an *order*, where the specification is "every parent before its child" and the failure case is a cycle rather than a wrong answer: [[kahns algorithm]].
 - The case where no specification is available at all, so correctness gives way to named trade-offs: [[Trade-offs in Data Systems Architecture]]. The search engine example above is that note's whole subject matter.
+- A guarantee that is expected rather than worst case, where a bad choice of function costs time but never correctness: [[Hashing]].
+- A one-tree counterexample to the obvious algorithm, and the invariant that fixes it: [[Binary Tree Validation]]. Comparing each node to its parent is the nearest-neighbour mistake again — locally right, globally wrong.
 - Part of [[Home]].
 

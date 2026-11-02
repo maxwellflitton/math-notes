@@ -87,6 +87,7 @@ Hashing has other applications. The idea of a hash is to represent a large objec
 - Where `visited` comes from in [[Breadth First Search]]. For a graph with dense integer ids that set is an array or a bitmask; for the implicit graphs that note describes — mesh triangles keyed by an index triple — there is no natural slot, so membership is a hash set and the traversal's $O(V + E)$ rests on the expected $O(1)$ above.
 - Rehashing is amortised doubling, the counting argument of [[Monotonic Stack]] in its other classic form: each grow moves every element once, but the sizes form a geometric series $n + \frac{n}{2} + \frac{n}{4} + \cdots < 2n$, so $n$ inserts cost $O(n)$ total even though one of them is $O(n)$ on its own. The geometric sum itself is the $\sum_{k} 2^k = 2^{n} - 1$ of [[Binary Numbers]].
 - At system scale this becomes a partitioning decision: sharding by hash of key spreads load evenly but destroys range scans, and every hash index is derived data rebuildable from the system of record — [[Trade-offs in Data Systems Architecture]].
+- The ordered alternative: [[Binary Tree Validation]] keeps keys sorted and pays $O(h)$ per lookup, which is the price of range queries and in-order iteration that bucketing throws away.
 - Part of [[Home]].
 
 ## Open

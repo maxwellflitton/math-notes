@@ -197,6 +197,8 @@ And here we have the rotated list.
 - Walking a list is naturally recursive — `len(node) = 1 + len(node.next)` with the empty list as the base case — so the loops here are the tail-recursive version written out, in the sense of [[basic recursion for sum loop]]. Rust gives no tail-call guarantee, which is the practical reason these are loops: a recursive `Drop` on a long list can blow the stack.
 - `as_ref`, `as_mut` and `take` are the three moves the borrow checker forces on a linked structure, and they are why this data structure is the standard Rust teaching example: `take()` is the only way to sever a link without cloning, because it swaps a `None` in and hands you the owned tail.
 - "Cost is a vector, not a single number" is the same argument [[Trade-offs in Data Systems Architecture]] makes about whole systems: once the order of growth matches, the choice is decided by allocations, cache behaviour and which operation you are willing to make expensive.
+- One of these per bucket is a chained hash table, and the pointer-per-bucket-plus-node-per-element cost is the argument for open addressing instead — [[Hashing]].
+- What an unbalanced binary search tree degenerates into when every node has one child, turning the $O(h)$ of [[Binary Tree Validation]] into $O(n)$ — balancing exists to stop a tree quietly becoming one of these.
 - Part of [[Home]].
 
 ## Open
