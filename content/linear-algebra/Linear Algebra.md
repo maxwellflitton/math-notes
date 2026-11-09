@@ -31,6 +31,7 @@ Space, distance and the objects living in it. Part of [[Home]].
 
 ## Operators
 - [[eigen]] — the vectors and functions a linear operator only scales, and what eigen-decomposition buys you.
+- [[eigenvectors|Eigenvectors and eigenvalues]] — the idea derived from a population model: $\mathbf{A}\mathbf{v} = \lambda\mathbf{v}$, linear independence and basis, eigenvector expansion, and why $\mathbf{A}^k\mathbf{x}$ converges on the dominant eigenvector.
 
 ## Threads
 - Both notes are written in set-builder notation — read [[sets]] first if `{ (x,y) | ax + by = c }` looks opaque.
@@ -49,6 +50,7 @@ Space, distance and the objects living in it. Part of [[Home]].
 - [x] Determinants and inverses beyond $2 \times 2$ — cofactors and the adjugate are in [[Determinants and inverses for matrices]], and the practical $O(n^3)$ route is [[Gaussian elimination]].
 - [ ] Shear and reflection matrices alongside the rotation and dilation of [[Matrix Overview]].
 - [ ] Diagonalisation and the characteristic polynomial, following on from [[eigen]].
+- [ ] Linear independence as its own note — [[eigenvectors]] introduces basis, dimension and span in passing, and [[Gaussian elimination]] is where a dependent set shows itself as a zero row.
 
 ## Related
 - [[CAD Geometry]] — the main consumer of this area.

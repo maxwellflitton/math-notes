@@ -1,0 +1,216 @@
+{
+  "main": {
+    "id": "3854659dae7fa93b",
+    "type": "split",
+    "children": [
+      {
+        "id": "bfe3a8227e004c53",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7cf5bf3e11672b70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "eigenvectors"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "17674f41b5f9ff34",
+    "type": "split",
+    "children": [
+      {
+        "id": "28589881bece797a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4b7daf89941b5167",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b3a5220c8d79909e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "7849aafa333b4543",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a2ae2217ac0b6999",
+    "type": "split",
+    "children": [
+      {
+        "id": "118726ae78088a77",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "056182f2e74d462b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "89e97ca076cee5ab",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "28f707a01dc68104",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e35f86175501ead4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4b1989bed4ae54c8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "7cf5bf3e11672b70",
+  "lastOpenFiles": [
+    "public/tags/index-og-image.webp",
+    "public/tags/rational-maps-og-image.webp",
+    "public/tags/polynomials-og-image.webp",
+    "public/tags/mst224-og-image.webp",
+    "public/tags/eigenvectors-og-image.webp",
+    "public/tags/vectors-og-image.webp",
+    "public/tags/rotation-og-image.webp",
+    "public/tags/quaternions-og-image.webp",
+    "public/tags/matrices-og-image.webp",
+    "public/tags/gaussian-elimination-og-image.webp",
+    "public/tags/example-og-image.webp",
+    "public/static/giscus/light.css",
+    "public/static/giscus/dark.css",
+    "public/static/giscus",
+    "public/_attachments",
+    "public/home.html",
+    "public/sphere-sweep.html",
+    "public/uv-sphere-capacity.html",
+    "public/static/contentIndex.json",
+    "public/index.xml",
+    "public/static/encryptedContentIndex.json",
+    "content/linear-algebra/vectors/eigenvectors.md"
+  ]
+}

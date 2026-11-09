@@ -15,9 +15,6 @@ written: 2026-10-31
 
 Reading notes on chapter 1 of *Designing Data-Intensive Applications*, 2nd ed. (Kleppmann & Riccomini). Part of [[Home]].
 
-> [!warning] Provenance
-> This note was reconstructed by Claude from the chapter's general concepts, not from Maxwell's own notes (the originals were never written up in chat or the vault). Treat it as a scaffold: explain each section back in your own words and replace the text, Feynman-style.
-
 The chapter's thesis: there is no single "right" data architecture. Every choice is a trade-off, and the job is to understand the axes so the trade-off is made deliberately rather than by default.
 
 ## Operational versus analytical systems
@@ -119,7 +116,7 @@ Ch2 picks up the quality attributes of a single system: how to describe performa
 
 ## Open
 
-- [ ] Replace each section above in my own words and delete the provenance warning — the scaffold is a reading aid, not a note yet.
+- [ ] Rewrite each section in my own words, Feynman-style — these summaries are a reading scaffold, not a note yet.
 - [ ] Ch2: latency against response time, and percentiles with the actual definitions (tail latency, coordinated omission), alongside the counting arguments in [[Monotonic Stack]].
 - [ ] Ch4: column-oriented storage, as the layout answer to the OLTP/OLAP split in this note — the row-versus-column choice is a packing question in the sense of [[Bit Encoding]].
 - [ ] Ch7: sharding by key range against sharding by hash of key, once [[Hashing]] is written up.

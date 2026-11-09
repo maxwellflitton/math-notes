@@ -132,5 +132,6 @@ $$
 - Physical reading of the same three cases — under-, over- and critically damped: [[dampened harmonic oscillator]].
 - Why $e^{\lambda t}$ is the right guess (it is its own derivative, and never zero, so it cancels): [[exp-algebria-rules]].
 - The structural reason the guess works: $e^{\lambda x}$ is an eigenfunction of $\frac{d}{dx}$, so the auxiliary equation is an eigenvalue equation — [[eigen]].
+- The matrix version of the same equation, worked end to end: [[eigenvectors]]. The constants $c_1, c_2$ fixed there by $\mathbf{r}_0$ are these arbitrary constants fixed by initial conditions, and $\lambda^k$ growing or dying is $e^{\lambda t}$ in discrete time.
 - Differentiating $e^{\lambda t}$ to $\lambda e^{\lambda t}$ is [[chain-rule|the chain rule]].
 - Euler's formula $e^{ix} = \cos x + i\sin x$ turns the complex exponentials into the trig pair — the same identity that proves the [[compound angle formula|compound angle formulae]].

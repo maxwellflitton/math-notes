@@ -195,6 +195,7 @@ The determinant respects matrix multiplication, $\det(AB) = \det(A)\det(B)$: doi
 - The transformations being inverted act on the vectors of [[Basic Operations]] in [[Euclidean space]], and composing them entry by entry is [[Matrix algebra]].
 - $\det(AB) = \det A \det B$ is why a chain of model, view and projection matrices has one overall volume scaling — the camera of [[Ortho derivation]], and the control-point transforms of [[CAD Geometry]].
 - The $n!$ cost of cofactor expansion is why nothing computes a determinant this way past $3 \times 3$: triangularising with row operations gives the same number as a product of pivots in $O(n^3)$, and the same sweep solves $A\mathbf{x} = \mathbf{b}$ — [[Gaussian elimination]].
+- The side of that machinery which *is* written: [[eigenvectors]] takes the $\lambda$ as given and shows what they buy — an eigenbasis, $\mathbf{A}^k$ as scalar powers, and convergence on the dominant direction. This note supplies the step it skips.
 - Part of [[Home]].
 
 ## Open

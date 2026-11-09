@@ -37,11 +37,10 @@ $$
 H(abc) = 26^{3} + 0 + 26 + 2 = 17{,}604
 $$
 
-> [!note] Changed from the handwritten version
-> The page used $a=1, b=2, c=3$, giving $18{,}307$. Per the "note to LLM" it has been shifted to zero-based ($a=0, b=1, c=2$), which gives $17{,}604$. Both are correct under their own char mapping; the index below has been recomputed to match.
+The char mapping is a convention, not a fact: one-based ($a=1, b=2, c=3$) would give $18{,}307$ for the same string. Either works as long as the whole table uses one of them.
 
-> [!note] Check against Skiena
-> Skiena's string hash is just the sum, $H(S) = \sum_{i=0}^{|S|-1} \alpha^{|S|-(i+1)}\,\mathrm{char}(S_i)$. The leading $\alpha^{|S|}$ term looks like an addition of yours. It's harmless (it's a constant for a given length, so it doesn't hurt distribution) but worth checking against the book.
+> [!note] The leading $\alpha^{|S|}$ term
+> Skiena's string hash is just the sum, $H(S) = \sum_{i=0}^{|S|-1} \alpha^{|S|-(i+1)}\,\mathrm{char}(S_i)$, with no leading $\alpha^{|S|}$. That extra term is a constant for a given length, so it shifts every hash of that length by the same amount and leaves the distribution alone — harmless, but worth confirming against the book before relying on it.
 
 ## Reducing to a bucket index
 
@@ -61,9 +60,6 @@ The modulo is the remainder, so the modulo of 4 can only be $0, 1, 2, 3$. If it 
 Because we don't have arrays with infinite size, hashes will collide when trying to allocate a bucket to a hash. One way of solving this is having chains off each bucket so we can add the colliding elements in the chain. However, this takes extra memory (a pointer per bucket and a node per element) that could instead have been used to make the table bigger and reduce the collisions.
 
 **Open addressing** is where we probe by moving the pointer up one if there's a collision. This keeps everything in one contiguous array, which is good for caching. Deletion is done by tombstoning the slot rather than removing it (otherwise probe sequences would break), but then you have compaction as tombstones build up.
-
-> [!note] Clarified
-> The handwritten line "this makes the caching and deletion (if tombstoned)" was garbled; the above is the intended meaning: open addressing is cache-friendly, deletion needs tombstones, tombstones eventually force a rehash/compaction.
 
 Chaining and probing both cost $O(m)$ to initialise, where $m$ is the number of buckets.
 

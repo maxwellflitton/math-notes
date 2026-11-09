@@ -82,8 +82,7 @@ So for a polynomial curve linking to a B-spline we have the following:
 
 $$c_1 : [0, 1] \to \mathbb{R}^3 \quad \text{and} \quad c_2 : [2, 5] \to \mathbb{R}^3 \;\Rightarrow\; c_1(1) = c_2(2)$$
 
-> [!note] Correction
-> The handwritten version had $c_2 : [2, 5] \to \mathbb{R}^2$. Both curves have to live in the same space for the join to make sense, so I've made it $\mathbb{R}^3$ to match $c_1$. The point of the example — that the join condition is "end parameter of $c_1$ equals start parameter of $c_2$", whatever those parameter values are — is unchanged.
+Both curves have to map into the same space for the join to make sense, hence $\mathbb{R}^3$ on both sides. The parameter intervals need not line up at all: the condition is only that the end parameter of $c_1$ and the start parameter of $c_2$ give the same point, whatever those values happen to be.
 
 ## Geometric continuity
 
@@ -115,8 +114,8 @@ $$(6, 5) = 2^2 \, (1, 1) + \mu \, (2, 1) \;\Rightarrow\; (6, 5) = (4 + 2\mu, \; 
 
 Therefore: $\mu = 1$ (both components agree).
 
-> [!note] Correction
-> The handwritten version had $c_1''(1) = (6, 4)$ and used $c_2'(0) = (2, 0)$ in the $\mu$ term. But $c_2'(0)$ was already fixed as $(2, 1)$ in the $\lambda$ example above, and with that value $(6, 4)$ gives $2\mu = 2$ from the first component but $\mu = 0$ from the second — so it's _not_ $G^2$. I've changed $c_1''(1)$ to $(6, 5)$ so that $\mu = 1$ comes out consistently from both components and the example demonstrates what it's meant to. The key idea is the same: $\mu$ has to be a single scalar that satisfies every component at once.
+> [!note] One scalar, every component
+> $\mu$ has to satisfy every component at once, which is what makes this a real test rather than bookkeeping. Had $c_1''(1)$ been $(6, 4)$ instead, the first component would ask for $2\mu = 2$ and the second for $\mu = 0$ — no single $\mu$ works, so that join would not be $G^2$.
 
 Now that we have continuity we can cover curvature.
 

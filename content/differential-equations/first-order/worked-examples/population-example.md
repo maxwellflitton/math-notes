@@ -93,4 +93,5 @@ separated left side) and a **carrying capacity** $M$ that caps the growth.
 - Continues the exponential model set up in [[First order differential equations]]; the method is separation of variables from [[Direct Integration]].
 - Integrals used: $\int\frac1P\,dP = \ln|P|$ from [[exponents]], and the sign flip on $\int\frac{1}{M-P}\,dP$ is a one-line [[by-substitution]].
 - Combining and exponentiating the logs: [[exp-algebria-rules]].
+- The discrete twin: the two-town migration model of [[eigenvectors]] steps year by year with $\mathbf{x}_{n+1} = \mathbf{T}\mathbf{x}_n$ and settles at a fixed ratio, where this one runs in continuous time and settles at $M$. Recurrence against differential equation, $\lambda^k$ against $e^{kt}$, steady state either way.
 - Part of [[Differential Equations]].
