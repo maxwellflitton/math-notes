@@ -146,6 +146,7 @@ which matches the magnitude above. Dot product zero, cross product maximal: the 
 - A determinant of zero means the rows are dependent — the same degeneracy that $\det(A - \lambda I) = 0$ exploits to find eigenvalues, the still-open characteristic polynomial of [[eigen]].
 - That $2 \times 2$ value $ps - qr$ is the $ad - bc$ dividing the inverse in [[Matrix Overview]]: dependent rows mean zero area, which means the transformation flattened the plane and cannot be undone.
 - This is the arithmetic a renderer does for the face normal $(B-A)\times(C-A)$ on the index triples of [[Cylinder]] and [[Sphere]].
+- The same $2 \times 2$ determinant is the numerator of curvature: $x'y'' - y'x''$ is the signed area spanned by velocity and acceleration, which is why its sign says which way a curve turns — [[Bezier Curves]].
 - Adding a third vector turns the area into a volume: the same grid with a real third row instead of $\hat{\imath}, \hat{\jmath}, \hat{k}$ is the scalar triple product of [[Volumes and the scalar triple product]].
 - The same cofactor expansion on a matrix of plain numbers, taken as far as the adjugate inverse: [[Determinants and inverses for matrices]].
 - Part of [[Home]].

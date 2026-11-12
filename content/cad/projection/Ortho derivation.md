@@ -238,12 +238,13 @@ $$
 \vec{r} = \frac{\vec{f} \times \vec{u}}{|\vec{f} \times \vec{u}|} \implies \vec{u}' = \vec{r} \times \vec{f}
 $$
 
-> [!info] Added — why the construction works
-> - A [[Vector Product|cross product]] is perpendicular to both inputs. So $\vec{r} \perp \vec{f}$ (it lies in the image plane) and $\vec{r} \perp \vec{u}$ (it points sideways).
-> - $\vec{r}$ needs normalising because $|\vec{f} \times \vec{u}| = |\vec{f}|\,|\vec{u}| \sin\theta$, and the hint may not be unit length or perpendicular to $\vec{f}$.
-> - $\vec{u}'$ needs no normalising: $\vec{r}$ and $\vec{f}$ are perpendicular unit vectors, so $|\vec{r} \times \vec{f}| = (1)(1)\sin 90^{\circ} = 1$.
-> - Only the across part of the hint matters. The along part dies because $\vec{f} \times \vec{f} = \vec{0}$. E.g. $\vec{u} = (0, 1, 5)$ gives the same $\vec{r}$ as $\vec{u} = (0, 1, 0)$ when $\vec{f} = (0, 0, -1)$.
-> - **Forbidden hint:** a hint parallel to $\vec{e}$ gives $\vec{f} \times \vec{u} = \vec{0}$ and a divide by zero. In a Z-up CAD world, looking straight down with hint $(0,0,1)$ breaks. Fix: swap to a different hint, e.g. $(0,1,0)$, when the view is nearly vertical.
+Why the construction works:
+
+- A [[Vector Product|cross product]] is perpendicular to both inputs. So $\vec{r} \perp \vec{f}$ (it lies in the image plane) and $\vec{r} \perp \vec{u}$ (it points sideways).
+- $\vec{r}$ needs normalising because $|\vec{f} \times \vec{u}| = |\vec{f}|\,|\vec{u}| \sin\theta$, and the hint may not be unit length or perpendicular to $\vec{f}$.
+- $\vec{u}'$ needs no normalising: $\vec{r}$ and $\vec{f}$ are perpendicular unit vectors, so $|\vec{r} \times \vec{f}| = (1)(1)\sin 90^{\circ} = 1$.
+- Only the across part of the hint matters. The along part dies because $\vec{f} \times \vec{f} = \vec{0}$. E.g. $\vec{u} = (0, 1, 5)$ gives the same $\vec{r}$ as $\vec{u} = (0, 1, 0)$ when $\vec{f} = (0, 0, -1)$.
+- **Forbidden hint:** a hint parallel to $\vec{e}$ gives $\vec{f} \times \vec{u} = \vec{0}$ and a divide by zero. In a Z-up CAD world, looking straight down with hint $(0,0,1)$ breaks. Fix: swap to a different hint, e.g. $(0,1,0)$, when the view is nearly vertical.
 
 > [!info] check by hand
 > $\vec{f} = (0, 0, -1)$, $\vec{u} = (0, 1, 0)$:
@@ -418,9 +419,7 @@ The view matrix gives camera space but throws nothing away. The **projection** m
 - $x_{c}$ and $y_{c}$ are divided by the half-width $w$ and half-height $h$ of the visible region, so it lands in $[-1, 1]$.
 - Depth $d = -z_{c}$ is mapped from $[n, f]$ (near and far planes, as distances in front of the eye) to $[0, 1]$, WebGPU's convention.
 
-> [!note] Check this against the text
-> This section is written ahead of the text's own step 5. The idea will be the same; the text may use off-centre bounds $(l, r, b, t)$ instead of a centred $w, h$.
-> The engine's version is in [[Ortho Application#3. The projection matrix]]: it is this matrix with $n = 0$, $f = 10^4$.
+This section runs ahead of the text's own step 5, which may use off-centre bounds $(l, r, b, t)$ rather than a centred $w, h$; the idea is the same either way. The engine's version is in [[Ortho Application#3. The projection matrix]] — this matrix with $n = 0$ and $f = 10^4$.
 
 For a view centred on the camera:
 

@@ -39,8 +39,7 @@ $$
 
 The char mapping is a convention, not a fact: one-based ($a=1, b=2, c=3$) would give $18{,}307$ for the same string. Either works as long as the whole table uses one of them.
 
-> [!note] The leading $\alpha^{|S|}$ term
-> Skiena's string hash is just the sum, $H(S) = \sum_{i=0}^{|S|-1} \alpha^{|S|-(i+1)}\,\mathrm{char}(S_i)$, with no leading $\alpha^{|S|}$. That extra term is a constant for a given length, so it shifts every hash of that length by the same amount and leaves the distribution alone — harmless, but worth confirming against the book before relying on it.
+Skiena's version of the same hash is just the sum, $H(S) = \sum_{i=0}^{|S|-1} \alpha^{|S|-(i+1)}\,\mathrm{char}(S_i)$, with no leading $\alpha^{|S|}$. That extra term is a constant for a given length, so it shifts every hash of that length by the same amount and leaves the distribution alone — harmless, but worth confirming against the book before relying on it.
 
 ## Reducing to a bucket index
 

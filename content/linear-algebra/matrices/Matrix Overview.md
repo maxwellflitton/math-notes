@@ -175,6 +175,7 @@ That denominator is the determinant of $A$ — the same $ps - qr$ that measures 
 - Repeated application is where that pays: [[eigenvectors]] turns $\mathbf{A}^k$ from $k$ matrix multiplications into $k$th powers of scalars, one per eigendirection, and reads the long-run behaviour straight off the largest of them.
 - The entries need not be numbers: over Booleans with OR for addition and AND for multiplication, matrix powers give the transitive closure $A^* = I \lor A \lor A^2 \lor \cdots$ of a permission hierarchy — [[Bitset Auth]].
 - Transformations of control points are how curves are moved and scaled in [[CAD Geometry]].
+- Why that works at all is affine invariance: the weights of a [[Bezier Curves|Bézier curve]] sum to one, so transforming the four control points transforms the whole curve. Its normal $N = (-T_y, T_x)$ is $R(90°)$ applied to the tangent.
 - Where $\frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$ comes from, and the $n \times n$ version of it: the cofactor matrix and adjugate of [[Determinants and inverses for matrices]].
 - The same rotations stored as four numbers instead of nine, composed by Hamilton product and inverted by conjugation rather than by $\frac{1}{\det A}C^T$: [[quaternions]], where $R^{-1}(\alpha) = R(-\alpha)$ reappears as $q^{-1} = \bar q$.
 - Part of [[Home]].

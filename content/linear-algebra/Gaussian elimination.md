@@ -261,8 +261,7 @@ $$
 
 However, there is a limitation to this. As the matrix grows, finding the inverse requires more steps. There is the exception of sparse matrices, but the inverse should not be thoughtlessly applied.
 
-> [!note] Where the $n!$ comes from
-> The $n!$ figure is the cost of a determinant — and hence an inverse — by cofactor expansion. Nobody computes one that way in practice: inverting via Gaussian elimination is $O(n^3)$, and solving $A\mathbf{x} = \mathbf{b}$ directly by elimination and back substitution is cheaper still, roughly a third of that work, and numerically better behaved. Hence the rule: do not form $A^{-1}$ just to solve a system, eliminate instead.
+That growth is often quoted as $n!$, which is really the cost of a determinant — and hence an inverse — by cofactor expansion. Nobody computes one that way in practice: inverting via Gaussian elimination is $O(n^3)$, and solving $A\mathbf{x} = \mathbf{b}$ directly by elimination and back substitution is cheaper still, roughly a third of that work, and numerically better behaved. Hence the rule: do not form $A^{-1}$ just to solve a system, eliminate instead.
 
 ## When the determinant is zero
 

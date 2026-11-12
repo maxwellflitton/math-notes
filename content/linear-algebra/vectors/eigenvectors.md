@@ -197,12 +197,11 @@ So why are we bothering with linear independence for eigenvalues and eigenvector
 
 We can technically have infinite eigenvectors for one eigenvalue, because any scalar multiple of an eigenvector points in the same direction and is also an eigenvector. That is why the statement is about *directions*: eigenvectors with **distinct** eigenvalues are always linearly independent.
 
-If we are working in 2D we can only have at most 2 linearly independent eigenvectors. More generally:
+If we are working in 2D we can only have at most 2 linearly independent eigenvectors. More generally, an $n \times n$ matrix has **at most** $n$ linearly independent eigenvectors. Distinct eigenvalues guarantee a full set of $n$; a repeated eigenvalue can give fewer, as in
 
-> [!note] At most $n$, not always $n$
-> An $n \times n$ matrix has **at most** $n$ linearly independent eigenvectors. Distinct eigenvalues guarantee a full set of $n$; a repeated eigenvalue can give fewer, as in
-> $$\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$$
-> which has eigenvalue $1$ twice but only one eigenvector direction, $[1 \;\; 0]^T$. That is why the result in the next section is stated conditionally: *if* $\mathbf{A}$ has $n$ linearly independent eigenvectors.
+$$\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$$
+
+which has eigenvalue $1$ twice but only one eigenvector direction, $[1 \;\; 0]^T$. That is why the result in the next section is stated conditionally: *if* $\mathbf{A}$ has $n$ linearly independent eigenvectors.
 
 ## 5. Eigenvector expansion
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "file": "content/cad/Bezier Curves.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "eigenvectors"
+              "title": "Bezier Curves"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "file": "content/cad/Bezier Curves.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "file": "content/cad/Bezier Curves.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/linear-algebra/vectors/eigenvectors.md",
+                "file": "content/cad/Bezier Curves.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -201,16 +201,17 @@
     "public/tags/matrices-og-image.webp",
     "public/tags/gaussian-elimination-og-image.webp",
     "public/tags/example-og-image.webp",
-    "public/static/giscus/light.css",
-    "public/static/giscus/dark.css",
-    "public/static/giscus",
-    "public/_attachments",
     "public/home.html",
+    "public/static/giscus/dark.css",
+    "public/static/giscus/light.css",
+    "public/static/giscus",
     "public/sphere-sweep.html",
     "public/uv-sphere-capacity.html",
-    "public/static/contentIndex.json",
-    "public/index.xml",
-    "public/static/encryptedContentIndex.json",
+    "public/_attachments",
+    "public/bernstein-polynomials.html",
+    "public/de-casteljau.html",
+    "public/bezier-curves.html",
+    "content/cad/Bezier Curves.md",
     "content/linear-algebra/vectors/eigenvectors.md"
   ]
 }

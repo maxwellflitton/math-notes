@@ -114,8 +114,7 @@ $$(6, 5) = 2^2 \, (1, 1) + \mu \, (2, 1) \;\Rightarrow\; (6, 5) = (4 + 2\mu, \; 
 
 Therefore: $\mu = 1$ (both components agree).
 
-> [!note] One scalar, every component
-> $\mu$ has to satisfy every component at once, which is what makes this a real test rather than bookkeeping. Had $c_1''(1)$ been $(6, 4)$ instead, the first component would ask for $2\mu = 2$ and the second for $\mu = 0$ — no single $\mu$ works, so that join would not be $G^2$.
+$\mu$ has to satisfy every component at once, which is what makes this a real test rather than bookkeeping. Had $c_1''(1)$ been $(6, 4)$ instead, the first component would ask for $2\mu = 2$ and the second for $\mu = 0$ — no single $\mu$ works, so that join would not be $G^2$.
 
 Now that we have continuity we can cover curvature.
 
