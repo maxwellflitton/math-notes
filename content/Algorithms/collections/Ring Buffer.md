@@ -1,3 +1,13 @@
+---
+tags:
+  - algorithms
+  - data-structures
+related: "[[introduction to algorithms]]"
+created: 2026-10-31
+---
+
+# Ring Buffer
+
 The ring buffer takes the following form:
 
 ```rust
@@ -85,3 +95,11 @@ impl<T> RingBuffer<T> {
     }
 }
 ```
+
+## Connections
+
+- The direct sibling is [[Linked Lists]], which does the same job with the opposite trade: here the data never moves and the *pointer* wraps with `% buffer.len()`, there the data stays put and the links are repointed. A rotation in a ring is one index assignment; in a chain it is a re-stitch of three `next` fields.
+- `(self.ptr + 1) % self.buffer.len()` is a division, and when the capacity is a power of two it is the mask `(p + 1) & (n - 1)` of [[Bit Shifting operations]] — the $2^k - 1$ low mask of [[Binary Numbers]], which is why production ring buffers are nearly always sized to a power of two.
+- A sliding window of the last few minutes of measurements is exactly this structure, which is how the percentile windows of [[Describing Performance]] are kept: fixed capacity, the oldest sample overwritten by the newest, nothing allocated per sample.
+- Overwriting rather than growing is a bounded-memory decision taken up front, which is the backpressure question of [[Trade-offs in Data Systems Architecture]] in one data structure — drop, block or buffer, with `push` here choosing to drop the oldest.
+- Part of [[Home]].

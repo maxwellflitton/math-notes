@@ -377,6 +377,7 @@ fn none_of(u: u8, n: u8) -> bool { u & n == 0 }
 - The same operators read the other way round. In [[Bit Encoding]] the fields are disjoint, so $\lor$ concatenates and overlap is the bug; here masks are meant to overlap, and $\lor$ is union. Both pack structure into one integer so the hot path is arithmetic.
 - Atoms $a(r) = 2^{\iota(r)}$ are single columns of place value, and `1 << \iota(r)` is the shift — [[Binary Numbers]].
 - The reachability closure $A^*$ is what you get by running [[Breadth First Search]] from every role, with $U$ as the visited mask: "not yet visited" is $U \land a(r) = 0$ and marking is one OR.
+- Making a cycle unrepresentable rather than detected is itself a reliability decision — [[reliability and fault tolerance]], where the same cycle between two services is an outage nobody can boot out of. The OR-against-addition warning above is the blast-radius argument at the scale of one line: the fault is a single operator, and the thing stopping it becoming a failure is a test rather than a pager.
 - The index-order sweep of step 3 works because $A$ is strictly lower triangular, i.e. the role ids already happen to be a topological order of the forest. Computing such an order when the ids do not supply one is [[kahns algorithm]], which has the same acyclicity precondition.
 - Part of [[Home]].
 

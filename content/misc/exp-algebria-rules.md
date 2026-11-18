@@ -80,3 +80,5 @@ in [[linear homogenious equations]], and why splitting $e^{(\alpha + \beta i)x} 
 - The product law is what makes shifting compose, $(x \ll a) \ll b = x \ll (a+b)$, and $\lfloor \log_2 N \rfloor + 1$ is the width of a number in bits — [[Binary Numbers]], applied in [[Bit Encoding]].
 - $\frac{d}{dx}e^{kx} = ke^{kx}$ says $e^{kx}$ is an eigenfunction of differentiation, with eigenvalue $k$ — [[eigen]].
 - $e^{i\theta} = \cos\theta + i\sin\theta$ gives the one-line proof in [[compound angle formula]].
+- The same approximation applied to hardware: $(1-r)^N \approx e^{-rN}$ is why an expected failure count $Nr$ and a probability of at least one failure agree only while $Nr$ is small — [[reliability and fault tolerance]].
+- $\ln(1-p) \approx -p$ for small $p$ is what turns $1 - (1-p)^N$ into $1 - e^{-pN}$, the fan-out formula in [[Describing Performance]]; the log-scaled histogram buckets there are the same laws read backwards, turning a multiplicative bucket width into an additive index.

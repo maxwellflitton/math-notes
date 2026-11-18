@@ -66,6 +66,8 @@ For this introduction the professor states that there isn't an efficient solutio
 - A graph algorithm whose output is an *order*, where the specification is "every parent before its child" and the failure case is a cycle rather than a wrong answer: [[kahns algorithm]].
 - The case where no specification is available at all, so correctness gives way to named trade-offs: [[Trade-offs in Data Systems Architecture]]. The search engine example above is that note's whole subject matter.
 - A guarantee that is expected rather than worst case, where a bad choice of function costs time but never correctness: [[Hashing]].
+- Where correctness and reliability come apart: [[reliability and fault tolerance]]. A bug is a counterexample, so it is deterministic and fires on every replica running that code at once, while a hardware fault is probabilistic and roughly independent. Redundancy exploits the second and does nothing about the first — ten copies of a wrong algorithm are wrong together.
+- The same average-against-worst-case split, measured rather than proved: [[Describing Performance]]. The mean and the p99 of a response time are two statistics of one distribution the way average and worst case are two claims about one algorithm — and big-O cannot settle either, because it drops the constants and says nothing about queueing.
 - A one-tree counterexample to the obvious algorithm, and the invariant that fixes it: [[Binary Tree Validation]]. Comparing each node to its parent is the nearest-neighbour mistake again — locally right, globally wrong.
 - Part of [[Home]].
 

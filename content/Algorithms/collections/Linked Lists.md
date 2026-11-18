@@ -198,6 +198,7 @@ And here we have the rotated list.
 - `as_ref`, `as_mut` and `take` are the three moves the borrow checker forces on a linked structure, and they are why this data structure is the standard Rust teaching example: `take()` is the only way to sever a link without cloning, because it swaps a `None` in and hands you the owned tail.
 - "Cost is a vector, not a single number" is the same argument [[Trade-offs in Data Systems Architecture]] makes about whole systems: once the order of growth matches, the choice is decided by allocations, cache behaviour and which operation you are willing to make expensive.
 - One of these per bucket is a chained hash table, and the pointer-per-bucket-plus-node-per-element cost is the argument for open addressing instead — [[Hashing]].
+- A queue in front of a busy server is one of these, which is what makes head-of-line blocking in [[Describing Performance]] a property of the structure rather than of the server: position in the chain, not urgency, decides who is served next, so one slow request is paid for by everything linked behind it.
 - What an unbalanced binary search tree degenerates into when every node has one child, turning the $O(h)$ of [[Binary Tree Validation]] into $O(n)$ — balancing exists to stop a tree quietly becoming one of these.
 - Part of [[Home]].
 

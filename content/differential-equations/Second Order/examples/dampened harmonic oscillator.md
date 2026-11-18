@@ -77,4 +77,5 @@ With this there is no oscillation but there is a bumpy road.
 - The step collapsing $C\cos\omega t + D\sin\omega t$ into $A\sin(\theta + \omega t)$ is the $R$-formula — derived in full in [[compound angle formula]] (Worked example 5).
 - The complex-root algebra behind the underdamped case: [[Complex conjugate roots]] and [[Complex solutions to linear homogenous differential equations]].
 - Exponential decay envelope $e^{-\Gamma t}$: [[exp-algebria-rules]].
+- Damping as an engineering decision rather than a physical constant: exponential backoff in [[Describing Performance]] is the $\Gamma$ added to a retry loop, and a *metastable* failure is this note's stability question — an equilibrium that holds until a push is large enough to put the exponent's sign the other way.
 - Part of [[Differential Equations]].

@@ -52,6 +52,7 @@ ALGORITHM TopologicalOrder(count, edges)
 - The adjacency list is a matrix in disguise: $A_{uv} = 1$ when $(u, v) \in E$, and a digraph is acyclic exactly when its rows and columns can be permuted to make $A$ strictly triangular — which is the permutation this algorithm computes. Matrix form and Boolean products are in [[Matrix algebra]] and [[Linear Algebra]].
 - That same matrix read numerically rather than combinatorially is what PageRank ranks: repeated multiplication converges on its dominant eigenvector, the power method of [[eigenvectors]]. One view asks for an order, the other for a weighting, from one adjacency matrix.
 - Why a CAD kernel needs it: a parametric model is a dependency graph of features and constraints, so a rebuild has to evaluate parents before children and a cycle is a user error to report rather than a crash — hence the `Err` branch returning the still-blocked nodes. The geometry being rebuilt is [[CAD Geometry]], and the same ordering governs GPU work whose passes consume each other's resources.
+- The failure mode when nobody runs this algorithm: two services that each need the other to boot cannot come back after a full outage — [[reliability and fault tolerance]]. A compiler catches the cycle because it holds the whole graph up front, while services discover their edges only by calling each other, so the sort that would have failed loudly is never attempted.
 - Part of [[Home]].
 
 ## Open

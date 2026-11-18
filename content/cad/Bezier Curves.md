@@ -2,7 +2,6 @@
 tags: [maths, cad, geometry, bezier]
 aliases: [Bezier curves, De Casteljau, Bernstein polynomials]
 ---
-
 # Bézier Curves
 
 ## 1. Starting from a line (lerp)
@@ -54,7 +53,6 @@ e &= \operatorname{lerp}(b, c, t) \\
 $$
 
 where
-
 $$
 \operatorname{lerp}(a, b, t) = a + (b-a)\,t
 $$
@@ -62,7 +60,6 @@ $$
 Calculating positions this way is known as **De Casteljau's algorithm**.
 
 ## 3. Expanding the lerps
-
 Now let's write out all the lerps manually:
 
 $$

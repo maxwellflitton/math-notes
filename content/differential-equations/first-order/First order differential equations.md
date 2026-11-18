@@ -69,3 +69,5 @@ sigmoid solution $P(t) = \dfrac{M\,P_0}{P_0 + (M - P_0)\,e^{-kt}}$.
 - The $\delta t \to 0$ step that turns the difference quotient into $\frac{dp}{dt}$ is [[lim-zero-example]].
 - Integrating $\int\frac1p\,dp = \ln|p|$ and then exponentiating both sides: [[exponents]] and [[exp-algebria-rules]].
 - One order up: [[Second Order differential Equations]], where two arbitrary constants are needed instead of one.
+- The same model with deaths only: a shelf of disks failing at a rate proportional to how many are left gives $\frac{dS}{dt} = -\lambda S$ and survival $e^{-\lambda t}$, the memoryless assumption that [[reliability and fault tolerance]] leans on and the **bathtub curve** contradicts at both ends.
+- The births-minus-deaths model outside biology: a retry storm in [[Describing Performance]] has retries as births and completions as deaths, so $\frac{dL}{dt} = (b - c)L$ and an overloaded system grows its own queue like $e^{rt}$. Exponential backoff is the move that puts $r$ back below zero.

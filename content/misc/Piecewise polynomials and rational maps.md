@@ -7,7 +7,6 @@ tags:
   - rational-maps
 date: 2026-10-25
 ---
-
 # Piecewise polynomials and rational maps
 
 ## Piecewise polynomial

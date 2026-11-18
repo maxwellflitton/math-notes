@@ -115,4 +115,5 @@ Once you can read those two halves, any set notation — no matter how dense —
 - The representation for a huge sparse universe, where one bit per element is impossible: [[Hashing]] buckets the keys instead, so $x \in S$ costs an expected constant and the price is collisions.
 - Interval notation doing real work: each node of [[Binary Tree Validation]] carries the range it may take, and walking down the tree intersects that interval with a half-line at every step.
 - Counting one set against another is how a running time gets bounded: the pops of [[Monotonic Stack]] inject into its pushes, so $\sum p_i \le n$ without ever evaluating the sum.
+- Complement and intersection doing load-bearing work: "at least one of $N$ drives fails" in [[reliability and fault tolerance]] is the complement of an intersection, and it only factorises into $(1-r)^N$ when the events are independent — which is exactly the assumption a correlated software bug breaks.
 - The other half of the prerequisite toolkit: [[exp-algebria-rules]].

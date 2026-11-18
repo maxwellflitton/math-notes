@@ -110,3 +110,4 @@ We get the `mask`, we then shift the mask, and then wipe all
 
 ## Connections
 - The low mask is how a ring buffer wraps when its capacity is a power of two: `(p + 1) & (n - 1)` in place of `(p + 1) % n` — see [[Linked Lists]] and [[Ring Buffer]] for the structures doing the wrapping, and [[Binary Numbers]] for why $2^k - 1$ is $k$ ones.
+- `extract(value, shift, width)` is how a latency histogram finds a bucket: the HdrHistogram layout in [[Describing Performance]] reads an exponent from the top bits and a mantissa from the next `width`, so a sample is bucketed in a couple of instructions instead of a division.

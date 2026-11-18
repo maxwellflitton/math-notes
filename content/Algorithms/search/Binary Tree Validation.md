@@ -101,6 +101,8 @@ Notes:
 - $O(h)$ space, and $h = n$ in the worst case, is the degenerate tree where every node has one child — which is a [[Linked Lists|linked list]], the same degeneracy [[Breadth First Search]] notes for a graph with out-degree one. Balancing exists to keep $h$ at $\log n$; without it a "tree" can quietly become a chain, and the recursion a stack overflow.
 - `None` standing in for $\pm\infty$ rather than `i32::MIN`/`i32::MAX` is the sentinel question that runs through the vault: reserve a value outside the key domain, as the all-zero id in [[Bit Encoding]] means "nothing". Picking an in-domain sentinel is how a legitimate key equal to `i32::MIN` turns into a false negative.
 - Ordered against unordered membership: [[Hashing]] answers "is this key present" in expected $O(1)$ but destroys order, while a BST pays $O(h)$ and keeps it, which is what makes range queries and sorted iteration possible at all. The on-disk version of that same trade is the B-tree, the reason databases index with them rather than hash tables — [[Trade-offs in Data Systems Architecture]].
+- `None` rather than `i32::MIN` is a reliability choice as much as a correctness one: it makes the dangerous state unrepresentable instead of documented, which is what "make the right thing easy" means in [[reliability and fault tolerance]]. An in-domain sentinel is a human error waiting for the one input that collides with it.
+- A percentile is a rank query, so the sorted sequence above is the instrument: $t_p$ is the element of rank $\lceil pn/100 \rceil$ in a window of response times, and a tree carrying subtree counts answers that in $O(h)$ without sorting anything — [[Describing Performance]].
 - Part of [[Home]].
 
 ## Open

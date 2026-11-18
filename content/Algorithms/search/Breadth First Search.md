@@ -102,6 +102,7 @@ DFS(start):
 - The recursive form of DFS, call stack instead of explicit stack, is a recurrence with a base case: [[basic recursion for sum loop]].
 - What `visited` actually is when the ids are not dense integers: a hash set, so hook three's membership test is the expected $O(1)$ of [[Hashing]] rather than an array index.
 - DFS carrying state downwards instead of sideways: [[Binary Tree Validation]] hands each child a tightened range, so the invariant rides the recursion and no `visited` set is needed — a tree has no second route to a node.
+- `visited` is cycle tolerance at runtime, and the distributed version of the same need is in [[reliability and fault tolerance]]: a request that can loop between two services needs a hop count or a deadline riding along with it, because nothing holds the whole call graph to check it in advance.
 - Part of [[Home]].
 
 ## Open

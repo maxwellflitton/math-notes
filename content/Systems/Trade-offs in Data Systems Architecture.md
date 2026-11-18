@@ -99,7 +99,7 @@ Data is not only an asset but a **liability**. Regulation (GDPR and successors) 
 
 ## Where this leads
 
-Ch2 picks up the quality attributes of a single system: how to describe performance (percentiles rather than averages), reliability and fault tolerance, scalability, and maintainability.
+Ch2 picks up the quality attributes of a single system: how to describe performance (percentiles rather than averages) in [[Describing Performance]], reliability and fault tolerance in [[reliability and fault tolerance]], then scalability and maintainability.
 
 ## Connections
 
@@ -107,8 +107,9 @@ Ch2 picks up the quality attributes of a single system: how to describe performa
 - Systems of record and derived data are already in the vault in miniature. [[Bitset Auth]] computes the closure masks at startup from the role table and the covering relation: the table is the source of truth, the masks are a materialised view, and losing them costs a restart rather than a fact. [[Bit Encoding]] is the same split per frame — the scene is authoritative, the id texture the fragment shader writes is derived and regenerated every draw, which is why a packed id can be reused the moment the scene changes.
 - Rebuilding derived data is a dependency problem, and the order is a topological sort: [[kahns algorithm]]. An ETL or ELT pipeline is a DAG of derivations where every parent must be refreshed before its children, a cycle is a modelling error to report rather than a crash, and the lower-triangular role numbering of [[Bitset Auth]] is that order assumed instead of computed.
 - "Cost is a vector, not a single number" is the thesis of this chapter at machine scale, and [[Linked Lists]] argues it on one data structure: two $O(n)$ rotations differing in allocations and passes, not in order of growth. [[Ring Buffer]] is the bounded-capacity version of the same bargain — a fixed allocation that overwrites rather than growing, which is the backpressure question (drop, block or buffer) a page before it becomes an architectural one.
-- Percentiles over averages, the Ch2 topic this chapter leads into, is the amortised argument of [[Monotonic Stack]] read from the other end. There a worst-case inner loop is harmless because the *total* is bounded; a tail latency is the case where the total is fine and the individual request is not, so averaging hides exactly the users who are suffering.
+- Percentiles over averages, the Ch2 topic this chapter leads into, is written up in [[Describing Performance]]: it is the amortised argument of [[Monotonic Stack]] read from the other end. There a worst-case inner loop is harmless because the *total* is bounded; a tail latency is the case where the total is fine and the individual request is not, so averaging hides exactly the users who are suffering. Tail amplification, $1 - (1-p)^N$ across a fan-out, is what partial failure costs when nothing has actually failed.
 - Separation of storage from compute is the shape the GPU notes already assume: durable buffers uploaded once and bound by [[Bindings]], against disposable per-invocation work in [[Shaders]] that holds no state between frames. Shared-nothing parallelism, the same reason both scale by adding units.
+- Fault tolerance, the first of the reasons to distribute above, gets its own section in [[reliability and fault tolerance]] — including the one case where adding machines does not help, because a software bug is correlated across every node running it. The system-of-record split is what decides whether a lost component is a fault or a failure: derived data is rebuildable, so losing it costs time, and redundancy is derived data kept on purpose.
 - The vault itself is an instance: markdown files in git are the system of record, and every search index, backlink table and published Quartz page is derived data that can be deleted and rebuilt from them.
 - Sharding by hash of key, the Ch7 topic, is [[Hashing]] applied to machines rather than buckets: even spread at the cost of range scans, with the same collision and rebalancing questions one level up.
 - B-trees, the Ch4 index structure, are [[Binary Tree Validation]]'s ordered-keys invariant generalised to disk pages — which is why an operational store indexes with them and keeps range scans, while an analytical one reaches for column layouts instead.
@@ -117,7 +118,7 @@ Ch2 picks up the quality attributes of a single system: how to describe performa
 ## Open
 
 - [ ] Rewrite each section in my own words, Feynman-style — these summaries are a reading scaffold, not a note yet.
-- [ ] Ch2: latency against response time, and percentiles with the actual definitions (tail latency, coordinated omission), alongside the counting arguments in [[Monotonic Stack]].
+- [x] Ch2: latency against response time, and percentiles with the actual definitions — written up in [[Describing Performance]] (coordinated omission still open there), with faults, correlated software failures and the human side in [[reliability and fault tolerance]].
 - [ ] Ch4: column-oriented storage, as the layout answer to the OLTP/OLAP split in this note — the row-versus-column choice is a packing question in the sense of [[Bit Encoding]].
 - [ ] Ch7: sharding by key range against sharding by hash of key, once [[Hashing]] is written up.
 - [ ] A worked example from my own work rather than the book's: which store in the CAD stack is the system of record, and what is rebuildable from it.

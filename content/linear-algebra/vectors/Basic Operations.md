@@ -74,3 +74,4 @@ $$
 - Scaling and addition are here, but *multiplying* two vectors is a separate operation with its own note — [[Scalar Product]], which also turns the magnitude above into $\sqrt{\vec{a}\cdot\vec{a}}$.
 - The second way of multiplying them, returning a vector rather than a number: [[Vector Product]].
 - Differentiating componentwise means every rule from [[chain-rule|differentiation]] applies one component at a time.
+- Componentwise addition is also why you can merge latency histograms but not average percentiles — [[Describing Performance]]. A histogram is a vector of bucket counts, so summing machines is vector addition and exact, while the quantile read off that vector is nonlinear and does not survive being averaged.
